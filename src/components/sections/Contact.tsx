@@ -1,23 +1,7 @@
 import { useTranslations } from 'next-intl';
+import { RiMapPinLine, RiPhoneLine } from 'react-icons/ri';
 import { BookButton } from '@/components/ui/BookButton';
 import { socials } from '@/config/socials';
-
-function IcoPin() {
-  return (
-    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
-      <path d="M12 22s7-7.2 7-12a7 7 0 1 0-14 0c0 4.8 7 12 7 12z" />
-      <circle cx="12" cy="10" r="2.5" />
-    </svg>
-  );
-}
-
-function IcoPhone() {
-  return (
-    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
-      <path d="M5 4h4l2 5-3 2a12 12 0 0 0 5 5l2-3 5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z" />
-    </svg>
-  );
-}
 
 function MapMock() {
   return (
@@ -73,7 +57,7 @@ export function Contact() {
           <div className="contact__block">
             <span className="contact__lbl">Studio</span>
             <p className="contact__addr">
-              <IcoPin /> {t('address')}
+              <RiMapPinLine size={16} /> {t('address')}
             </p>
           </div>
 
@@ -94,7 +78,7 @@ export function Contact() {
           <div className="contact__block">
             <span className="contact__lbl">Contact</span>
             <a className="contact__phone" href={`tel:${phone.replace(/\s/g, '')}`}>
-              <IcoPhone /> {phone}
+              <RiPhoneLine size={16} /> {phone}
             </a>
             <div className="contact__sm">
               {socials.map(({ label, href, icon: Icon }) => (

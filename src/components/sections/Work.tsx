@@ -1,6 +1,7 @@
 'use client';
 
 import { useCallback, useEffect, useRef, useState } from 'react';
+import { RiArrowLeftSLine, RiArrowRightSLine, RiExpandLeftRightLine } from 'react-icons/ri';
 import { useTranslations } from 'next-intl';
 import { Placeholder } from '@/components/ui/Placeholder';
 
@@ -32,14 +33,6 @@ const GAL_ITEMS: GalItem[] = [
   { id: 8, kind: 'comb', tone: 'mid', span: 'sq', caption: 'Detail · 06' },
   { id: 9, kind: 'portrait', tone: 'warm', span: 'tall', caption: 'Bob · 14' },
 ];
-
-function IcoChevs() {
-  return (
-    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2">
-      <path d="M9 6l-5 6 5 6M15 6l5 6-5 6" />
-    </svg>
-  );
-}
 
 function BeforeAfterSlider({ pair, index }: { pair: typeof BA_PAIRS[0]; index: number }) {
   const t = useTranslations('work');
@@ -87,7 +80,7 @@ function BeforeAfterSlider({ pair, index }: { pair: typeof BA_PAIRS[0]; index: n
       <span className="ba__lbl ba__lbl--r">{t('after')}</span>
       <div className="ba__handle" style={{ left: `${pos}%` }} aria-hidden="true">
         <span className="ba__handle-line" />
-        <span className="ba__handle-knob"><IcoChevs /></span>
+        <span className="ba__handle-knob"><RiExpandLeftRightLine size={16} /></span>
       </div>
     </figure>
   );
@@ -127,15 +120,11 @@ function Lightbox({
       <button type="button" className="lb__x" onClick={onClose} aria-label="Close">✕</button>
       <button type="button" className="lb__nav lb__nav--l"
         onClick={(e) => { e.stopPropagation(); onPrev(); }} aria-label="Previous">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-          <path d="M15 6l-6 6 6 6" />
-        </svg>
+        <RiArrowLeftSLine size={20} />
       </button>
       <button type="button" className="lb__nav lb__nav--r"
         onClick={(e) => { e.stopPropagation(); onNext(); }} aria-label="Next">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-          <path d="M9 6l6 6-6 6" />
-        </svg>
+        <RiArrowRightSLine size={20} />
       </button>
       <figure className="lb__fig" onClick={(e) => e.stopPropagation()}>
         <Placeholder kind={g.kind} tone={g.tone} caption={g.caption}

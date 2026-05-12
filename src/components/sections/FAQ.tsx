@@ -2,14 +2,7 @@
 
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
-
-function IcoChev() {
-  return (
-    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-      <path d="M6 9l6 6 6-6" />
-    </svg>
-  );
-}
+import { RiArrowDownSLine } from 'react-icons/ri';
 
 export function FAQ() {
   const t = useTranslations('faq');
@@ -39,7 +32,7 @@ export function FAQ() {
               >
                 <span className="faq__num">{String(i + 1).padStart(2, '0')}</span>
                 <span className="faq__q-text">{item.q}</span>
-                <span className="faq__chev"><IcoChev /></span>
+                <span className="faq__chev"><RiArrowDownSLine size={16} /></span>
               </button>
               <div className="faq__a-wrap">
                 <p className="faq__a">{item.a}</p>

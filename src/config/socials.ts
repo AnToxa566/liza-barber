@@ -1,4 +1,4 @@
-import { FaInstagram, FaTelegram } from 'react-icons/fa';
+import { RiInstagramLine, RiTelegram2Line } from 'react-icons/ri';
 import type { IconType } from 'react-icons';
 
 export interface Social {
@@ -11,11 +11,11 @@ export const socials: Social[] = [
   {
     label: 'Instagram',
     href: 'https://www.instagram.com/eliza.baidak/',
-    icon: FaInstagram,
+    icon: RiInstagramLine,
   },
   {
     label: 'Telegram',
     href: 'https://t.me/ElizaBaydak',
-    icon: FaTelegram,
+    icon: RiTelegram2Line,
   },
 ];

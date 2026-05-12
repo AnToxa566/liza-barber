@@ -1,13 +1,6 @@
 import { useTranslations } from 'next-intl';
+import { RiArrowRightLongLine } from 'react-icons/ri';
 import { BookButton } from '@/components/ui/BookButton';
-
-function IcoArrow() {
-  return (
-    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-      <path d="M5 12h14M13 5l7 7-7 7" />
-    </svg>
-  );
-}
 
 export function CtaSection() {
   const t = useTranslations('cta');
@@ -22,7 +15,7 @@ export function CtaSection() {
         <div className="cta-big__r">
           <p className="cta-big__sub">{t('sub')}</p>
           <BookButton type="button" className="btn btn--inv btn--lg">
-            {t('btn')} <IcoArrow />
+            {t('btn')} <RiArrowRightLongLine size={16} />
           </BookButton>
           <span className="cta-big__meta">{t('meta')}</span>
         </div>

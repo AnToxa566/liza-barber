@@ -1,4 +1,5 @@
 import { useTranslations } from 'next-intl';
+import { RiTimeLine } from 'react-icons/ri';
 import { Placeholder } from '@/components/ui/Placeholder';
 import { BookButton } from '@/components/ui/BookButton';
 
@@ -7,15 +8,6 @@ type Kind = 'portrait' | 'scissors' | 'comb' | 'razor' | 'studio' | 'beard';
 
 const SVC_KINDS: Kind[] = ['scissors', 'beard', 'razor', 'comb', 'razor', 'studio'];
 const SVC_TONES: Tone[] = ['light', 'warm', 'mid', 'light', 'dark', 'warm'];
-
-function IcoClock() {
-  return (
-    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
-      <circle cx="12" cy="12" r="9" />
-      <path d="M12 7v5l3 2" />
-    </svg>
-  );
-}
 
 export function Services() {
   const t = useTranslations('services');
@@ -51,7 +43,7 @@ export function Services() {
                   <h3 className="h3">{svc.name}</h3>
                   <span className="svc-card__price">{svc.price}</span>
                 </div>
-                <div className="svc-card__meta"><IcoClock /> {svc.duration}</div>
+                <div className="svc-card__meta"><RiTimeLine size={12} /> {svc.duration}</div>
                 <p className="svc-card__desc">{svc.desc}</p>
                 <BookButton type="button" className="btn btn--outline">
                   {t('bookThis')}
