@@ -1,0 +1,49 @@
+{
+  "nav": {
+    "services": "Hizmetler",
+    "work": "İşler",
+    "reviews": "Yorumlar",
+    "contact": "İletişim",
+    "book": "Randevu al"
+  },
+  "hero": {
+    "label": "Berber · Varna · BG",
+    "headlineA": "Varna'daki",
+    "headlineB": "berberin.",
+    "lead": "Erkek, kadın ve çocuklar için saç kesimi, sakal şekillendirme ve bakım. Online randevu — beklemeden.",
+    "address": "Knyaz Boris I 47, Varna",
+    "hours": "Sal–Cmt · 10:00–20:00",
+    "phone": "+359 88 412 90 31",
+    "cta1": "Randevu al",
+    "cta2": "Haritada bul"
+  },
+  "trust": [
+    {
+      "n": "5+",
+      "l": "Yıl deneyim"
+    },
+    {
+      "n": "500+",
+      "l": "Mutlu müşteri"
+    },
+    {
+      "n": "★ 4.9",
+      "l": "Google"
+    },
+    {
+      "n": "4",
+      "l": "Dil"
+    }
+  ],
+  "cta": {
+    "kicker": "Randevu al",
+    "title": "Yeni görünüme hazır mısın?",
+    "sub": "İki dakikada online randevu. Telefon aramadan, bekleme listesiz.",
+    "btn": "Randevu al",
+    "meta": "Knyaz Boris I 47 · Varna · +359 88 412 90 31"
+  },
+  "meta": {
+    "title": "Varna'da Berber — Eliza Baidak",
+    "description": "Varna'da saç kesimi, sakal şekillendirme ve bakım. Online randevu — beklemeden. 30 BGN'den başlayan fiyatlar."
+  }
+}

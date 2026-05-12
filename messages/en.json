@@ -1,0 +1,254 @@
+{
+  "nav": {
+    "services": "Services",
+    "work": "Work",
+    "reviews": "Reviews",
+    "contact": "Contact",
+    "book": "Book now"
+  },
+  "hero": {
+    "label": "Barber · Varna · BG",
+    "headlineA": "Your barber",
+    "headlineB": "in Varna.",
+    "lead": "Haircuts, beard styling and grooming for men, women and kids. Walk-in friendly when there's a slot — but online booking is faster.",
+    "address": "ul. Knyaz Boris I 47, Varna",
+    "hours": "Tue–Sat · 10:00–20:00",
+    "phone": "+359 88 412 90 31",
+    "cta1": "Book appointment",
+    "cta2": "Find on map"
+  },
+  "trust": [
+    {
+      "n": "5+",
+      "l": "Years cutting"
+    },
+    {
+      "n": "500+",
+      "l": "Happy clients"
+    },
+    {
+      "n": "★ 4.9",
+      "l": "Google reviews"
+    },
+    {
+      "n": "4",
+      "l": "Languages spoken"
+    }
+  ],
+  "services": {
+    "kicker": "Services & pricing",
+    "title": "What I do.",
+    "sub": "Every appointment includes consult, wash, cut and styling. No upsells, no hidden add-ons.",
+    "items": [
+      {
+        "name": "Signature haircut",
+        "duration": "45 min",
+        "price": "from 30 BGN",
+        "desc": "Scissors and machine cut, tailored to your hair type and face."
+      },
+      {
+        "name": "Beard shaping",
+        "duration": "30 min",
+        "price": "from 20 BGN",
+        "desc": "Outline, scissor work and hot-towel finish for a clean line."
+      },
+      {
+        "name": "Cut + beard combo",
+        "duration": "75 min",
+        "price": "from 45 BGN",
+        "desc": "Full reset — haircut, beard sculpt, brow tidy and finish."
+      },
+      {
+        "name": "Kids haircut",
+        "duration": "30 min",
+        "price": "from 20 BGN",
+        "desc": "Patient, no-rush cuts for kids 4–12. Tablets allowed."
+      },
+      {
+        "name": "Head shave",
+        "duration": "30 min",
+        "price": "from 25 BGN",
+        "desc": "Smooth razor finish with pre-shave oil and after-balm."
+      },
+      {
+        "name": "Grooming add-on",
+        "duration": "15 min",
+        "price": "from 15 BGN",
+        "desc": "Clay mask, scalp scrub or beard treatment — pair with any cut."
+      }
+    ],
+    "bookThis": "Book this"
+  },
+  "work": {
+    "kicker": "Before / after",
+    "title": "See the change.",
+    "sub": "Drag to compare. The cut speaks louder than the copy.",
+    "galleryKicker": "The work.",
+    "galleryTitle": "Real cuts, real clients. No filters.",
+    "before": "Before",
+    "after": "After",
+    "close": "Close",
+    "prev": "Previous",
+    "next": "Next"
+  },
+  "reviews": {
+    "kicker": "What people say",
+    "title": "Reviews.",
+    "sub": "Pulled straight from Google and Instagram. Nothing edited.",
+    "items": [
+      {
+        "text": "First time at Eliza's and already booked the next three. She actually listens, asks questions, and the cut sat perfectly without me touching it for two weeks. Best fade I've had in Varna.",
+        "name": "Martin G.",
+        "source": "Google",
+        "stars": 5
+      },
+      {
+        "text": "Brought my 7-year-old who normally hates haircuts. Eliza was patient, made him laugh, and we walked out with a great cut. We're regulars now.",
+        "name": "Yana P.",
+        "source": "Google",
+        "stars": 5
+      },
+      {
+        "text": "Speaks fluent Russian which made the whole thing easy. The beard sculpt is the best I've had — clean lines, no irritation. Worth the trip across town.",
+        "name": "Dmitri K.",
+        "source": "Instagram",
+        "stars": 5
+      },
+      {
+        "text": "Studio is spotless, tools are obviously sanitised between clients, and she takes the time to explain what she's doing. Quality is night-and-day vs the cheap places.",
+        "name": "Stoyan I.",
+        "source": "Google",
+        "stars": 5
+      },
+      {
+        "text": "Came in with a grown-out mess and left looking like a person again. She gave honest advice on what would suit my hair instead of pushing whatever's trendy.",
+        "name": "Elif T.",
+        "source": "Google",
+        "stars": 5
+      }
+    ]
+  },
+  "about": {
+    "kicker": "About me",
+    "title": "Meet your barber.",
+    "p1": "I'm Eliza — a barber based in Varna for the last five years. I trained in Sofia, then in Berlin under a master barber I still send postcards to, and I've been working out of my own small studio on Knyaz Boris since 2022.",
+    "p2": "I cut for everyone — men, women, kids — and I treat every chair the same: ask the right questions, take time, do it once. No conveyor belt, no upselling, no rushing you out the door.",
+    "p3": "Outside the studio you'll find me at the Sea Garden with a coffee, or sketching tattoo flash for friends.",
+    "pills": [
+      "Master barber",
+      "5+ years",
+      "BG · EN · RU · UK",
+      "Sterile tools"
+    ],
+    "whyMe": [
+      {
+        "title": "One client at a time",
+        "desc": "No double-booking. The chair is yours."
+      },
+      {
+        "title": "Sterile, every cut",
+        "desc": "UV cabinet between every client. Single-use blades."
+      },
+      {
+        "title": "Honest pricing",
+        "desc": "Fixed menu. No surprise add-ons at checkout."
+      },
+      {
+        "title": "I speak your language",
+        "desc": "Bulgarian, English, Russian, Ukrainian."
+      }
+    ]
+  },
+  "cta": {
+    "kicker": "Book now",
+    "title": "Ready for your new look?",
+    "sub": "Book online in two minutes. No phone call, no waiting list.",
+    "btn": "Book your slot",
+    "meta": "Knyaz Boris I 47 · Varna · +359 88 412 90 31"
+  },
+  "faq": {
+    "kicker": "Q & A",
+    "title": "Questions & answers.",
+    "items": [
+      {
+        "q": "How much does a haircut cost in Varna?",
+        "a": "Signature haircut starts at 30 BGN. The full menu is on this page — prices are fixed, no surprise add-ons. The combo cut + beard is the best-value option at 45 BGN."
+      },
+      {
+        "q": "How do I book an appointment?",
+        "a": "Tap any \"Book\" button on this page — it opens the booking widget. Pick a service, pick a slot, you're done. Confirmation goes to your email and phone."
+      },
+      {
+        "q": "Where are you located and how to get there?",
+        "a": "Knyaz Boris I 47, central Varna — five minutes from the cathedral, two minutes from the Opera. Bus 9, 14, 17 stop on the corner. Limited paid parking on the street."
+      },
+      {
+        "q": "Do you work with children?",
+        "a": "Yes — kids 4 and up. The kids cut is 20 BGN and we book a longer slot so there's no rush. Tablets and snacks welcome."
+      },
+      {
+        "q": "What languages do you speak?",
+        "a": "Bulgarian, English, Russian and Ukrainian — fluently. Some basic Turkish for the essentials."
+      },
+      {
+        "q": "How long does a haircut take?",
+        "a": "Plan for 45 minutes for a haircut, 30 for a beard, 75 for the combo. I don't double-book so we don't run late."
+      },
+      {
+        "q": "Do I need to bring anything?",
+        "a": "Just yourself. Towels, capes, products — all here. Reference photos welcome but optional."
+      },
+      {
+        "q": "Do you offer beard grooming?",
+        "a": "Yes — beard sculpt, line-up, hot-towel and razor finish. Add a beard treatment (clay mask or oil) for 15 BGN."
+      }
+    ]
+  },
+  "contact": {
+    "kicker": "Find me",
+    "title": "Drop in.",
+    "address": "ul. Knyaz Boris I 47, 9000 Varna, Bulgaria",
+    "hours": [
+      {
+        "d": "Mon",
+        "h": "Closed"
+      },
+      {
+        "d": "Tue – Fri",
+        "h": "10:00 – 20:00"
+      },
+      {
+        "d": "Sat",
+        "h": "10:00 – 18:00"
+      },
+      {
+        "d": "Sun",
+        "h": "Closed"
+      }
+    ],
+    "phone": "+359 88 412 90 31",
+    "socials": [
+      {
+        "label": "Instagram",
+        "url": "https://www.instagram.com/liza.barber.varna"
+      },
+      {
+        "label": "TikTok",
+        "url": "https://www.tiktok.com/@lizabarber"
+      }
+    ],
+    "bookBtn": "Book appointment",
+    "mapBtn": "Find on map"
+  },
+  "footer": {
+    "tag": "Barber · Varna · BG",
+    "rights": "© 2025 Eliza Baidak · Varna",
+    "navLabel": "Navigate",
+    "studioLabel": "Studio",
+    "langLabel": "Language"
+  },
+  "meta": {
+    "title": "Barber in Varna — Eliza Baidak",
+    "description": "Professional haircuts, beard styling and grooming in Varna. Book online — no waiting. Haircut from 30 BGN."
+  }
+}
