@@ -4,27 +4,9 @@ import { Fragment, useEffect, useState } from 'react';
 import { useTranslations, useLocale } from 'next-intl';
 import { usePathname, useRouter } from '@/i18n/navigation';
 import { BookButton } from '@/components/ui/BookButton';
+import { socials } from '@/config/socials';
 
 const LOCALES = ['bg', 'en', 'ru', 'uk', 'tr'] as const;
-
-function IcoIg() {
-  return (
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
-      <rect x="3" y="3" width="18" height="18" rx="5" />
-      <circle cx="12" cy="12" r="4" />
-      <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
-    </svg>
-  );
-}
-
-function IcoTt() {
-  return (
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
-      <path d="M14 4 V15 a4 4 0 1 1 -4 -4" />
-      <path d="M14 4 c0 3 2 5 5 5" />
-    </svg>
-  );
-}
 
 export function Header() {
   const t = useTranslations('nav');
@@ -75,12 +57,11 @@ export function Header() {
 
         <div className="hdr__right">
           <div className="hdr__socials" aria-label="Social">
-            <a href="https://www.instagram.com/liza.barber.varna" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-              <IcoIg />
-            </a>
-            <a href="https://www.tiktok.com/@lizabarber" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
-              <IcoTt />
-            </a>
+            {socials.map(({ label, href, icon: Icon }) => (
+              <a key={label} href={href} target="_blank" rel="noopener noreferrer" aria-label={label}>
+                <Icon size={18} />
+              </a>
+            ))}
           </div>
 
           <div className="hdr__lang" role="group" aria-label="Language">

@@ -202,7 +202,7 @@ button { font: inherit; color: inherit; }
 }
 .hdr__nav a:hover { color: var(--txt); }
 
-.hdr__right { display: flex; align-items: center; gap: 16px; }
+.hdr__right { display: flex; align-items: center; gap: 24px; }
 
 .hdr__socials { display: flex; gap: 12px; color: var(--txt-2); }
 .hdr__socials a:hover { color: var(--accent); }

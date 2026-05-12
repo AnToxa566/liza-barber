@@ -1,5 +1,6 @@
 import { useTranslations } from 'next-intl';
 import { BookButton } from '@/components/ui/BookButton';
+import { socials } from '@/config/socials';
 
 function IcoPin() {
   return (
@@ -14,25 +15,6 @@ function IcoPhone() {
   return (
     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
       <path d="M5 4h4l2 5-3 2a12 12 0 0 0 5 5l2-3 5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z" />
-    </svg>
-  );
-}
-
-function IcoIg() {
-  return (
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
-      <rect x="3" y="3" width="18" height="18" rx="5" />
-      <circle cx="12" cy="12" r="4" />
-      <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
-    </svg>
-  );
-}
-
-function IcoTt() {
-  return (
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
-      <path d="M14 4 V15 a4 4 0 1 1 -4 -4" />
-      <path d="M14 4 c0 3 2 5 5 5" />
     </svg>
   );
 }
@@ -79,7 +61,6 @@ function MapMock() {
 export function Contact() {
   const t = useTranslations('contact');
   const hours = t.raw('hours') as Array<{ d: string; h: string }>;
-  const socials = t.raw('socials') as Array<{ label: string; url: string }>;
   const phone = t('phone');
 
   return (
@@ -116,10 +97,10 @@ export function Contact() {
               <IcoPhone /> {phone}
             </a>
             <div className="contact__sm">
-              {socials.map((s, i) => (
-                <a key={i} href={s.url} target="_blank" rel="noopener noreferrer" className="contact__sm-l">
-                  {s.label === 'Instagram' ? <IcoIg /> : <IcoTt />}
-                  <span>{s.label}</span>
+              {socials.map(({ label, href, icon: Icon }) => (
+                <a key={label} href={href} target="_blank" rel="noopener noreferrer" className="contact__sm-l">
+                  <Icon size={16} />
+                  <span>{label}</span>
                 </a>
               ))}
             </div>

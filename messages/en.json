@@ -227,16 +227,6 @@
       }
     ],
     "phone": "+359 88 412 90 31",
-    "socials": [
-      {
-        "label": "Instagram",
-        "url": "https://www.instagram.com/liza.barber.varna"
-      },
-      {
-        "label": "TikTok",
-        "url": "https://www.tiktok.com/@lizabarber"
-      }
-    ],
     "bookBtn": "Book appointment",
     "mapBtn": "Find on map"
   },
