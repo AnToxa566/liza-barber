@@ -317,6 +317,7 @@
     "kicker": "Find me",
     "title": "Drop in.",
     "address": "ul. Dimitar Ikonomov I 36, 9010 Varna, Bulgaria",
+    "addressShort": "Dimitar Ikonomov I 36",
     "hours": [
       {
         "d": "Mon — Thu",
@@ -333,14 +334,19 @@
     ],
     "phone": "+359 87 73 77 255",
     "bookBtn": "Book appointment",
-    "mapBtn": "Find on map"
+    "mapBtn": "Open in Maps →",
+    "studioLabel": "Studio",
+    "hoursLabel": "Hours",
+    "contactLabel": "Contact",
+    "hoursShort": "Sun–Thu · 10:00–20:00"
   },
   "footer": {
     "tag": "Barber · Varna · Bulgaria",
     "rights": "© 2026 Eliza Baidak · Varna",
     "navLabel": "Navigate",
     "studioLabel": "Studio",
-    "langLabel": "Language"
+    "langLabel": "Language",
+    "altegioNote": "Bookings via Altegio · GDPR"
   },
   "meta": {
     "title": "Barber in Varna — Eliza Baidak",

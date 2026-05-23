@@ -36,11 +36,11 @@ const LOCAL_BUSINESS_LD = {
   telephone: '+359877377255',
   address: {
     '@type': 'PostalAddress',
-    streetAddress: 'ul. Knyaz Boris I 47',
+    streetAddress: 'ul. Dimitar Ikonomov I 36',
     addressLocality: 'Varna',
     addressCountry: 'BG',
   },
-  openingHours: 'Tu-Sa 10:00-20:00',
+  openingHours: 'Sun-Thu 10:00-20:00',
   priceRange: '30–80 BGN',
 };
 

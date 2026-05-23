@@ -9,6 +9,7 @@ import { locales } from '@/config/locales';
 export function Footer() {
   const t = useTranslations('footer');
   const nav = useTranslations('nav');
+  const contact = useTranslations('contact');
   const locale = useLocale();
   const router = useRouter();
   const pathname = usePathname();
@@ -43,9 +44,9 @@ export function Footer() {
         <div className="ftr__col">
           <span className="ftr__lbl">{t('studioLabel')}</span>
           <p className="ftr__nap">
-            ul. Knyaz Boris I 47<br />9000 Varna, Bulgaria<br />
-            <a href="tel:+359877377255">+359 87 73 77 255</a><br />
-            Tue–Sat · 10:00–20:00
+            {contact('address')}<br />
+            <a href={`tel:${contact('phone').replace(/\s/g, '')}`}>{contact('phone')}</a><br />
+            {contact('hoursShort')}
           </p>
         </div>
 
@@ -70,7 +71,7 @@ export function Footer() {
 
       <div className="ftr__btm container">
         <span>{t('rights')}</span>
-        <span>Bookings via Altegio · GDPR</span>
+        <span>{t('altegioNote')}</span>
       </div>
     </footer>
   );

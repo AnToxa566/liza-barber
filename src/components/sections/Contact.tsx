@@ -3,7 +3,7 @@ import { RiMapPinLine, RiPhoneLine } from 'react-icons/ri';
 import { BookButton } from '@/components/ui/BookButton';
 import { socials } from '@/config/socials';
 
-function MapMock() {
+function MapMock({ mapBtn, addressShort }: { mapBtn: string; addressShort: string }) {
   return (
     <div className="map">
       <svg className="map__bg" viewBox="0 0 400 400" preserveAspectRatio="none" aria-hidden="true">
@@ -30,14 +30,14 @@ function MapMock() {
         <span className="map__pin-dot" />
         <span className="map__pin-card">
           <strong>Eliza.</strong>
-          <span>Knyaz Boris I 47</span>
+          <span>{addressShort}</span>
         </span>
       </div>
 
       <div className="map__chrome">
         <span>43.2087° N · 27.9168° E</span>
         <a href="https://maps.google.com/?q=ul.+Knyaz+Boris+I+47,+Varna" target="_blank" rel="noopener noreferrer" className="map__open">
-          Open in Maps →
+          {mapBtn}
         </a>
       </div>
     </div>
@@ -57,14 +57,14 @@ export function Contact() {
           <h2 className="h2">{t('title')}</h2>
 
           <div className="contact__block">
-            <span className="contact__lbl">Studio</span>
+            <span className="contact__lbl">{t('studioLabel')}</span>
             <p className="contact__addr">
               <RiMapPinLine size={16} /> {t('address')}
             </p>
           </div>
 
           <div className="contact__block">
-            <span className="contact__lbl">Hours</span>
+            <span className="contact__lbl">{t('hoursLabel')}</span>
             <table className="contact__hours">
               <tbody>
                 {hours.map((row, i) => (
@@ -78,7 +78,7 @@ export function Contact() {
           </div>
 
           <div className="contact__block">
-            <span className="contact__lbl">Contact</span>
+            <span className="contact__lbl">{t('contactLabel')}</span>
             <a className="contact__phone" href={`tel:${phone.replace(/\s/g, '')}`}>
               <RiPhoneLine size={16} /> {phone}
             </a>
@@ -100,7 +100,7 @@ export function Contact() {
         </div>
 
         <div className="contact__map">
-          <MapMock />
+          <MapMock mapBtn={t('mapBtn')} addressShort={t('addressShort')} />
         </div>
       </div>
     </section>
