@@ -4,8 +4,7 @@ import { Fragment } from 'react';
 import { useLocale, useTranslations } from 'next-intl';
 import { usePathname, useRouter } from '@/i18n/navigation';
 import { socials } from '@/config/socials';
-
-const LOCALES = ['bg', 'en', 'ru', 'uk', 'tr'] as const;
+import { locales } from '@/config/locales';
 
 export function Footer() {
   const t = useTranslations('footer');
@@ -53,7 +52,7 @@ export function Footer() {
         <div className="ftr__col">
           <span className="ftr__lbl">{t('langLabel')}</span>
           <div className="ftr__lang">
-            {LOCALES.map((l, i) => (
+            {locales.map((l, i) => (
               <Fragment key={l}>
                 {i > 0 && <span>·</span>}
                 <button

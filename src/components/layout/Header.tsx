@@ -5,8 +5,7 @@ import { useTranslations, useLocale } from 'next-intl';
 import { usePathname, useRouter } from '@/i18n/navigation';
 import { BookButton } from '@/components/ui/BookButton';
 import { socials } from '@/config/socials';
-
-const LOCALES = ['bg', 'en', 'ru', 'uk', 'tr'] as const;
+import { locales } from '@/config/locales';
 
 export function Header() {
   const t = useTranslations('nav');
@@ -65,7 +64,7 @@ export function Header() {
           </div>
 
           <div className="hdr__lang" role="group" aria-label="Language">
-            {LOCALES.map((l, i) => (
+            {locales.map((l, i) => (
               <Fragment key={l}>
                 {i > 0 && <span className="hdr__lang-sep" aria-hidden="true">·</span>}
                 <button
@@ -111,7 +110,7 @@ export function Header() {
           </nav>
           <div className="hdr__sheet-foot">
             <div className="hdr__lang hdr__lang--lg">
-              {LOCALES.map((l, i) => (
+              {locales.map((l, i) => (
                 <Fragment key={l}>
                   {i > 0 && <span className="hdr__lang-sep">·</span>}
                   <button

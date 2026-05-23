@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Anton, Inter } from 'next/font/google';
 import { headers } from 'next/headers';
+import { DEFAULT_LOCALE } from '@/config/locales';
 import './globals.css';
 
 const anton = Anton({
@@ -28,7 +29,7 @@ export default async function RootLayout({
   children: React.ReactNode;
 }>) {
   const headersList = await headers();
-  const locale = headersList.get('x-next-intl-locale') ?? 'bg';
+  const locale = headersList.get('x-next-intl-locale') ?? DEFAULT_LOCALE;
 
   return (
     <html lang={locale} className={`${anton.variable} ${inter.variable}`}>
