@@ -201,33 +201,39 @@
     "sub": "Pulled straight from Altegio. Nothing edited.",
     "items": [
       {
-        "text": "First time at Eliza's and already booked the next three. She actually listens, asks questions, and the cut sat perfectly without me touching it for two weeks. Best fade I've had in Varna.",
-        "name": "Martin G.",
-        "source": "Google",
+        "text": "Eliza is a wonderful specialist! She approaches everything with attention to detail and care. I'm very happy with the haircut and beard shaping tailored to my style. Highly recommend!",
+        "name": "Emil",
+        "source": "Altegio",
         "stars": 5
       },
       {
-        "text": "Brought my 7-year-old who normally hates haircuts. Eliza was patient, made him laugh, and we walked out with a great cut. We're regulars now.",
-        "name": "Yana P.",
-        "source": "Google",
+        "text": "Excellent service! The hairdresser was very professional and did an amazing job. I'm extremely happy with the result and will definitely visit again! 🫶🏻",
+        "name": "Georgi Zhelyazkov",
+        "source": "Altegio",
         "stars": 5
       },
       {
-        "text": "Speaks fluent Russian which made the whole thing easy. The beard sculpt is the best I've had — clean lines, no irritation. Worth the trip across town.",
-        "name": "Dmitri K.",
-        "source": "Instagram",
+        "text": "A real professional who knows exactly how to cut a classic hairstyle. Highly recommended!",
+        "name": "Nick",
+        "source": "Altegio",
         "stars": 5
       },
       {
-        "text": "Studio is spotless, tools are obviously sanitised between clients, and she takes the time to explain what she's doing. Quality is night-and-day vs the cheap places.",
-        "name": "Stoyan I.",
-        "source": "Google",
+        "text": "Polite service and true professionalism. Honestly, I have never seen such attention to detail anywhere before. Bravo and kudos. Eliza is very attentive, talented, and clearly loves her work! She exceeded my expectations.",
+        "name": "Ali Aliev",
+        "source": "Altegio",
         "stars": 5
       },
       {
-        "text": "Came in with a grown-out mess and left looking like a person again. She gave honest advice on what would suit my hair instead of pushing whatever's trendy.",
-        "name": "Elif T.",
-        "source": "Google",
+        "text": "Incredibly precise work — she perfects every detail, so attentive! One of a kind! We are very pleased, thank you!",
+        "name": "Mariyana Madzharova",
+        "source": "Altegio",
+        "stars": 5
+      },
+      {
+        "text": "High quality service as always — the hairdresser is kind and attentive. 10/10",
+        "name": "Dimitri",
+        "source": "Altegio",
         "stars": 5
       }
     ]
