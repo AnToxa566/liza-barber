@@ -7,19 +7,19 @@
     "book": "Book now"
   },
   "hero": {
-    "label": "Barber · Varna · BG",
+    "label": "Barber · Varna · Bulgaria",
     "headlineA": "Your barber",
     "headlineB": "in Varna.",
-    "lead": "Haircuts, beard styling and grooming for men, women and kids. Walk-in friendly when there's a slot — but online booking is faster.",
-    "address": "ul. Knyaz Boris I 47, Varna",
-    "hours": "Tue–Sat · 10:00–20:00",
-    "phone": "+359 88 412 90 31",
+    "lead": "Haircuts, beard styling and grooming for men and kids. Walk-in friendly when there's a slot — but online booking is faster.",
+    "address": "ul. Dimitar Ikonomov I 36, Varna",
+    "hours": "Sun–Thu · 10:00–20:00",
+    "phone": "+359 87 73 77 255",
     "cta1": "Book appointment",
     "cta2": "Find on map"
   },
   "trust": [
     {
-      "n": "5+",
+      "n": "3+",
       "l": "Years cutting"
     },
     {
@@ -28,7 +28,7 @@
     },
     {
       "n": "★ 4.9",
-      "l": "Google reviews"
+      "l": "Altegio reviews"
     },
     {
       "n": "4",
@@ -39,45 +39,149 @@
     "kicker": "Services & pricing",
     "title": "What I do.",
     "sub": "Every appointment includes consult, wash, cut and styling. No upsells, no hidden add-ons.",
+    "bookThis": "Book this",
     "items": [
       {
-        "name": "Signature haircut",
-        "duration": "45 min",
-        "price": "from 30 BGN",
-        "desc": "Scissors and machine cut, tailored to your hair type and face."
+        "title": "Haircuts",
+        "items": [
+          {
+            "name": "Kid's Haircut (6–10 y.o.)",
+            "duration": "1 hour",
+            "price": "15€",
+            "desc": "Consultation, wash, precise haircut, blow-dry and styling. A calm and comfortable experience tailored to your child's age."
+          },
+          {
+            "name": "Men's Haircut",
+            "duration": "1 hour",
+            "price": "20€",
+            "desc": "Consultation, wash, precise cut and contouring, eyebrow shaping, nose and ear waxing, styling and home care tips. Suits both classic and modern looks."
+          },
+          {
+            "name": "Men's Long Hair Haircut",
+            "duration": "1 hour 30 min",
+            "price": "25€",
+            "desc": "Careful shaping and maintenance of long hair using professional techniques suited to your hair type. Includes consultation, wash, cut and styling."
+          },
+          {
+            "name": "Men's Haircut & Hair Camouflage",
+            "duration": "1 hour 30 min",
+            "price": "30€",
+            "desc": "Precise haircut combined with camouflaging grey or thinning hair using specialist techniques and products. Includes consultation, wash, cut, camouflage and styling."
+          }
+        ]
       },
       {
-        "name": "Beard shaping",
-        "duration": "30 min",
-        "price": "from 20 BGN",
-        "desc": "Outline, scissor work and hot-towel finish for a clean line."
+        "title": "Beard",
+        "items": [
+          {
+            "name": "Express Beard Refresh",
+            "duration": "30 min",
+            "price": "10€",
+            "desc": "Quick beard trim, shaping and moisturizing for a clean, well-groomed look."
+          },
+          {
+            "name": "Royal Beard Shaping",
+            "duration": "1 hour",
+            "price": "15€",
+            "desc": "Premium beard shaping with attention to detail. Includes face patches, hot towels, eye mask and waxing."
+          },
+          {
+            "name": "Royal Shave",
+            "duration": "1 hour",
+            "price": "15€",
+            "desc": "Premium straight razor shave with warm towel preparation, moisturizing and a finishing massage for a smooth, comfortable result."
+          },
+          {
+            "name": "Beard Shaping & Camouflage",
+            "duration": "1 hour 30 min",
+            "price": "25€",
+            "desc": "Professional beard shaping with grey hair camouflage for a fresh, well-kept look. Includes consultation and care."
+          }
+        ]
       },
       {
-        "name": "Cut + beard combo",
-        "duration": "75 min",
-        "price": "from 45 BGN",
-        "desc": "Full reset — haircut, beard sculpt, brow tidy and finish."
+        "title": "Combos",
+        "items": [
+          {
+            "name": "Express Complex",
+            "duration": "1 hour 30 min",
+            "price": "25€",
+            "desc": "Haircut and beard shaping combined — perfect for the busy man who wants a fresh, groomed look."
+          },
+          {
+            "name": "Bald Complex",
+            "duration": "1 hour",
+            "price": "25€",
+            "desc": "Professional beard shaping combined with a classic head shave. Includes skin care and high-quality products."
+          },
+          {
+            "name": "Royal Complex",
+            "duration": "1 hour 30 min",
+            "price": "30€",
+            "desc": "Full grooming package with precise haircut, beard shaping and additional services for a polished look. Includes consultation and professional products."
+          },
+          {
+            "name": "Haircut, Camouflage & Beard Shaping",
+            "duration": "2 hours",
+            "price": "40€",
+            "desc": "Complete package with haircut, grey hair camouflage and beard shaping. Includes consultation and professional products."
+          },
+          {
+            "name": "SPA Complex",
+            "duration": "2 hours",
+            "price": "45€",
+            "desc": "Luxury package with haircut, beard shaping, facial care and relaxing treatments for full comfort and style."
+          }
+        ]
       },
       {
-        "name": "Kids haircut",
-        "duration": "30 min",
-        "price": "from 20 BGN",
-        "desc": "Patient, no-rush cuts for kids 4–12. Tablets allowed."
-      },
-      {
-        "name": "Head shave",
-        "duration": "30 min",
-        "price": "from 25 BGN",
-        "desc": "Smooth razor finish with pre-shave oil and after-balm."
-      },
-      {
-        "name": "Grooming add-on",
-        "duration": "15 min",
-        "price": "from 15 BGN",
-        "desc": "Clay mask, scalp scrub or beard treatment — pair with any cut."
+        "title": "Add-ons",
+        "items": [
+          {
+            "name": "Facial Therapy",
+            "duration": "30 min",
+            "price": "20€",
+            "desc": "Add-on. Professional facial care with hydrating and nourishing treatments."
+          },
+          {
+            "name": "Patches",
+            "duration": "10 min",
+            "price": "5€",
+            "desc": "Included in: Haircut, Beard Shaping, Complex."
+          },
+          {
+            "name": "Ear & Nose Waxing",
+            "duration": "10 min",
+            "price": "5€",
+            "desc": "Included in: Haircut, Beard Shaping, Complex. Add-on. Removal of unwanted hair from nose and ears for a clean, groomed look."
+          },
+          {
+            "name": "Eyebrow Shaping",
+            "duration": "10 min",
+            "price": "5€",
+            "desc": "Included in: Haircut, Beard Shaping, Complex. Add-on. Precise eyebrow shaping for a neat, balanced look."
+          },
+          {
+            "name": "Head Camouflage",
+            "duration": "30 min",
+            "price": "20€",
+            "desc": "Add-on. Concealing thinning hair and uneven areas for a natural, well-kept appearance."
+          },
+          {
+            "name": "Beard SPA & Face Care",
+            "duration": "30 min",
+            "price": "20€",
+            "desc": "Add-on. Luxury nourishing and relaxing treatments for beard and facial skin."
+          },
+          {
+            "name": "Beard Camouflage",
+            "duration": "30 min",
+            "price": "20€",
+            "desc": "Add-on. Concealing grey hairs and uneven patches for a fresh, well-groomed look."
+          }
+        ]
       }
-    ],
-    "bookThis": "Book this"
+    ]
   },
   "work": {
     "kicker": "Before / after",
@@ -94,7 +198,7 @@
   "reviews": {
     "kicker": "What people say",
     "title": "Reviews.",
-    "sub": "Pulled straight from Google and Instagram. Nothing edited.",
+    "sub": "Pulled straight from Altegio. Nothing edited.",
     "items": [
       {
         "text": "First time at Eliza's and already booked the next three. She actually listens, asks questions, and the cut sat perfectly without me touching it for two weeks. Best fade I've had in Varna.",

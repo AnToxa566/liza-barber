@@ -1,22 +1,15 @@
 import { useTranslations } from 'next-intl';
-import { RiTimeLine } from 'react-icons/ri';
-import { Placeholder } from '@/components/ui/Placeholder';
-import { BookButton } from '@/components/ui/BookButton';
-
-type Tone = 'light' | 'mid' | 'dark' | 'warm';
-type Kind = 'portrait' | 'scissors' | 'comb' | 'razor' | 'studio' | 'beard';
-
-const SVC_KINDS: Kind[] = ['scissors', 'beard', 'razor', 'comb', 'razor', 'studio'];
-const SVC_TONES: Tone[] = ['light', 'warm', 'mid', 'light', 'dark', 'warm'];
+import { ServicesTabs, type Category } from './ServicesTabs';
 
 export function Services() {
   const t = useTranslations('services');
-  const items = t.raw('items') as Array<{
-    name: string;
-    price: string;
-    duration: string;
-    desc: string;
-  }>;
+
+  const rawItems = t.raw('items') as Array<{ title: string; items: Category['items'] }>;
+  const categories: Category[] = rawItems.map((cat) => ({
+    id: cat.title.toLowerCase().replace(/\s+/g, '-'),
+    label: cat.title,
+    items: cat.items,
+  }));
 
   return (
     <section id="services" className="sec sec--services">
@@ -27,31 +20,7 @@ export function Services() {
           <p className="sec__sub">{t('sub')}</p>
         </header>
 
-        <div className="svc__grid svc__grid--photo">
-          {items.map((svc, i) => (
-            <article key={i} className="svc-card svc-card--photo">
-              <div className="svc-card__media">
-                <Placeholder
-                  kind={SVC_KINDS[i % SVC_KINDS.length]}
-                  tone={SVC_TONES[i % SVC_TONES.length]}
-                  caption={`Service · ${String(i + 1).padStart(2, '0')}`}
-                  style={{ width: '100%', aspectRatio: '4/3' }}
-                />
-              </div>
-              <div className="svc-card__body">
-                <div className="svc-card__topline">
-                  <h3 className="h3">{svc.name}</h3>
-                  <span className="svc-card__price">{svc.price}</span>
-                </div>
-                <div className="svc-card__meta"><RiTimeLine size={12} /> {svc.duration}</div>
-                <p className="svc-card__desc">{svc.desc}</p>
-                <BookButton type="button" className="btn btn--outline">
-                  {t('bookThis')}
-                </BookButton>
-              </div>
-            </article>
-          ))}
-        </div>
+        <ServicesTabs categories={categories} bookThis={t('bookThis')} />
       </div>
     </section>
   );

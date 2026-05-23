@@ -35,6 +35,54 @@
       "l": "Говорими езика"
     }
   ],
+  "services": {
+    "kicker": "Services & pricing",
+    "title": "What I do.",
+    "sub": "Every appointment includes consult, wash, cut and styling. No upsells, no hidden add-ons.",
+    "bookThis": "Book this",
+    "items": [
+      {
+        "title": "Haircuts",
+        "items": [
+          { "name": "Kid's Haircut (6–10 y.o.)", "duration": "1 hour", "price": "15€", "desc": "Consultation, wash, precise haircut, blow-dry and styling." },
+          { "name": "Men's Haircut", "duration": "1 hour", "price": "20€", "desc": "Consultation, wash, precise cut and contouring, eyebrow shaping, nose and ear waxing, styling and home care tips." },
+          { "name": "Men's Long Hair Haircut", "duration": "1 hour 30 min", "price": "25€", "desc": "Careful shaping and maintenance of long hair. Includes consultation, wash, cut and styling." },
+          { "name": "Men's Haircut & Hair Camouflage", "duration": "1 hour 30 min", "price": "30€", "desc": "Precise haircut combined with camouflaging grey or thinning hair. Includes consultation, wash, cut, camouflage and styling." }
+        ]
+      },
+      {
+        "title": "Beard",
+        "items": [
+          { "name": "Express Beard Refresh", "duration": "30 min", "price": "10€", "desc": "Quick beard trim, shaping and moisturizing for a clean, well-groomed look." },
+          { "name": "Royal Beard Shaping", "duration": "1 hour", "price": "15€", "desc": "Premium beard shaping with attention to detail. Includes face patches, hot towels, eye mask and waxing." },
+          { "name": "Royal Shave", "duration": "1 hour", "price": "15€", "desc": "Premium straight razor shave with warm towel preparation, moisturizing and a finishing massage." },
+          { "name": "Beard Shaping & Camouflage", "duration": "1 hour 30 min", "price": "25€", "desc": "Professional beard shaping with grey hair camouflage for a fresh, well-kept look." }
+        ]
+      },
+      {
+        "title": "Combos",
+        "items": [
+          { "name": "Express Complex", "duration": "1 hour 30 min", "price": "25€", "desc": "Haircut and beard shaping combined — perfect for the busy man who wants a fresh, groomed look." },
+          { "name": "Bald Complex", "duration": "1 hour", "price": "25€", "desc": "Professional beard shaping combined with a classic head shave. Includes skin care and high-quality products." },
+          { "name": "Royal Complex", "duration": "1 hour 30 min", "price": "30€", "desc": "Full grooming package with precise haircut, beard shaping and additional services for a polished look." },
+          { "name": "Haircut, Camouflage & Beard Shaping", "duration": "2 hours", "price": "40€", "desc": "Complete package with haircut, grey hair camouflage and beard shaping." },
+          { "name": "SPA Complex", "duration": "2 hours", "price": "45€", "desc": "Luxury package with haircut, beard shaping, facial care and relaxing treatments." }
+        ]
+      },
+      {
+        "title": "Add-ons",
+        "items": [
+          { "name": "Facial Therapy", "duration": "30 min", "price": "20€", "desc": "Add-on. Professional facial care with hydrating and nourishing treatments." },
+          { "name": "Patches", "duration": "10 min", "price": "5€", "desc": "Included in: Haircut, Beard Shaping, Complex." },
+          { "name": "Ear & Nose Waxing", "duration": "10 min", "price": "5€", "desc": "Included in: Haircut, Beard Shaping, Complex. Add-on." },
+          { "name": "Eyebrow Shaping", "duration": "10 min", "price": "5€", "desc": "Included in: Haircut, Beard Shaping, Complex. Add-on." },
+          { "name": "Head Camouflage", "duration": "30 min", "price": "20€", "desc": "Add-on. Concealing thinning hair and uneven areas." },
+          { "name": "Beard SPA & Face Care", "duration": "30 min", "price": "20€", "desc": "Add-on. Luxury nourishing and relaxing treatments for beard and facial skin." },
+          { "name": "Beard Camouflage", "duration": "30 min", "price": "20€", "desc": "Add-on. Concealing grey hairs and uneven patches." }
+        ]
+      }
+    ]
+  },
   "meta": {
     "title": "Бръснар във Варна — Лиза Байдак",
     "description": "Подстригване, оформяне на брада и грижа за коса — Варна. Запази онлайн — без чакане. От 30 лв."

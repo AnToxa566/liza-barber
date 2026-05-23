@@ -346,7 +346,7 @@ button { font: inherit; color: inherit; }
   flex-wrap: wrap;
 }
 .sec__sub { color: var(--txt-2); font-size: 16px; line-height: 1.65; margin: 16px 0 0; max-width: 60ch; }
-.sec__sub--right { text-align: right; max-width: 32ch; }
+.sec__sub--right { text-align: right; max-width: 22ch; }
 
 /* ── Services ─────────────────────────────────────────────────────────── */
 
@@ -359,11 +359,13 @@ button { font: inherit; color: inherit; }
   border-radius: 12px;
   overflow: hidden;
   transition: border-color .15s, background .15s;
+  display: flex;
+  flex-direction: column;
 }
 .svc-card:hover { border-color: var(--accent-tint); background: #FAFAFA; }
 
 .svc-card--photo .svc-card__media { aspect-ratio: 4/3; }
-.svc-card--photo .svc-card__body { padding: 24px; display: flex; flex-direction: column; gap: 12px; }
+.svc-card--photo .svc-card__body { padding: 24px; display: flex; flex-direction: column; gap: 12px; flex: 1; }
 .svc-card__topline {
   display: flex; align-items: baseline; justify-content: space-between; gap: 16px;
 }
@@ -379,7 +381,40 @@ button { font: inherit; color: inherit; }
 .svc-card__desc {
   font-size: 14px; line-height: 1.55; color: var(--txt-2); margin: 0;
 }
-.svc-card--photo .btn { align-self: flex-start; margin-top: 4px; }
+.svc-card--photo .btn { align-self: flex-start; margin-top: auto; }
+
+/* D — categorised tabs above the same photo-card grid */
+.svc__tabbed { display: flex; flex-direction: column; gap: 32px; }
+.svc__tabs {
+  display: flex;
+  gap: 32px;
+  align-items: stretch;
+  border-bottom: 0.5px solid var(--border);
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.svc__tabs::-webkit-scrollbar { display: none; }
+.svc__tab {
+  background: transparent;
+  border: 0;
+  padding: 14px 0;
+  margin-bottom: -0.5px;
+  font: 600 13px/1 var(--font-inter), "Inter", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--txt-3);
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  white-space: nowrap;
+  transition: color .15s;
+}
+.svc__tab:hover { color: var(--txt-2); }
+.svc__tab[data-on="1"] {
+  color: var(--txt);
+  border-bottom-color: var(--accent);
+}
+
+.sec--work { background: var(--surface); }
 
 /* ── Before/after ─────────────────────────────────────────────────────── */
 
@@ -495,14 +530,14 @@ button { font: inherit; color: inherit; }
 
 /* ── Reviews ──────────────────────────────────────────────────────────── */
 
-.sec--reviews { background: var(--surface); border-top: 0.5px solid var(--border); border-bottom: 0.5px solid var(--border); }
+
 .rev__row {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: var(--card-gap);
 }
 .rev-card {
-  background: var(--bg);
+  background: var(--surface);
   border: 0.5px solid var(--border);
   border-radius: 12px;
   padding: 24px;
@@ -538,6 +573,8 @@ button { font: inherit; color: inherit; }
 .rev-card__who { display: flex; flex-direction: column; gap: 2px; }
 .rev-card__name { font: 600 14px/1 var(--font-inter), "Inter", sans-serif; color: var(--txt); }
 .rev-card__src { font: 400 12px/1 var(--font-inter), "Inter", sans-serif; color: var(--txt-3); }
+
+.sec--about { background: var(--surface); }
 
 /* ── About ────────────────────────────────────────────────────────────── */
 
@@ -589,6 +626,8 @@ button { font: inherit; color: inherit; }
   letter-spacing: 0.08em;
   margin-top: 4px;
 }
+
+.sec--faq { background: var(--surface); }
 
 /* ── FAQ ──────────────────────────────────────────────────────────────── */
 
@@ -885,7 +924,7 @@ button { font: inherit; color: inherit; }
 
   .rev__row { gap: 16px; }
   .sec__head--row { flex-direction: column; align-items: flex-start; }
-  .sec__sub--right { text-align: left; }
+  .sec__sub--right { text-align: left; max-width: 100%; }
 
   .ftr__grid { grid-template-columns: 1fr; gap: 28px; }
   .ftr__btm { flex-direction: column; gap: 8px; }
