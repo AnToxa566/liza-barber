@@ -44,7 +44,7 @@ export function Footer() {
           <span className="ftr__lbl">{t('studioLabel')}</span>
           <p className="ftr__nap">
             ul. Knyaz Boris I 47<br />9000 Varna, Bulgaria<br />
-            <a href="tel:+359884129031">+359 88 412 90 31</a><br />
+            <a href="tel:+359877377255">+359 87 73 77 255</a><br />
             Tue–Sat · 10:00–20:00
           </p>
         </div>

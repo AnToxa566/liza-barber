@@ -25,6 +25,7 @@ function MapMock() {
         <rect x="60" y="170" width="60" height="50" fill="rgba(0,0,0,.05)" />
         <rect x="280" y="120" width="50" height="40" fill="rgba(0,0,0,.05)" />
       </svg>
+
       <div className="map__pin">
         <span className="map__pin-dot" />
         <span className="map__pin-card">
@@ -32,6 +33,7 @@ function MapMock() {
           <span>Knyaz Boris I 47</span>
         </span>
       </div>
+
       <div className="map__chrome">
         <span>43.2087° N · 27.9168° E</span>
         <a href="https://maps.google.com/?q=ul.+Knyaz+Boris+I+47,+Varna" target="_blank" rel="noopener noreferrer" className="map__open">

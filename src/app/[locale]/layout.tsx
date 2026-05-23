@@ -33,7 +33,7 @@ const LOCAL_BUSINESS_LD = {
   name: 'Eliza Baidak — Barber',
   image: '',
   url: 'https://lizabarber.bg',
-  telephone: '+359884129031',
+  telephone: '+359877377255',
   address: {
     '@type': 'PostalAddress',
     streetAddress: 'ul. Knyaz Boris I 47',
