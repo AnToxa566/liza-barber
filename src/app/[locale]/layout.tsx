@@ -5,6 +5,14 @@ import { routing } from '@/i18n/routing';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { PHONE } from '@/config/contact';
+import { SITE_URL } from '@/config/site';
+
+const OG_LOCALE: Record<string, string> = {
+  bg: 'bg_BG',
+  en: 'en_US',
+  ru: 'ru_RU',
+  uk: 'uk_UA',
+};
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -24,6 +32,30 @@ export async function generateMetadata({
     alternates: {
       canonical: `/${locale}`,
       languages: Object.fromEntries(routing.locales.map((l) => [l, `/${l}`])),
+    },
+    openGraph: {
+      type: 'website',
+      url: `${SITE_URL}/${locale}`,
+      siteName: 'Eliza Barber',
+      title: t('title'),
+      description: t('description'),
+      images: [{ url: '/og.jpg' }],
+      locale: OG_LOCALE[locale] ?? locale,
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: t('title'),
+      description: t('description'),
+      images: ['/og.jpg'],
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: { index: true, follow: true },
+    },
+    icons: {
+      icon: '/favicon.ico',
+      shortcut: '/favicon.ico',
     },
   };
 }
@@ -56,7 +88,7 @@ export default async function LocaleLayout({
     '@type': 'LocalBusiness',
     name: 'Eliza Baidak — Barber',
     image: '',
-    url: 'https://lizabarber.bg',
+    url: SITE_URL,
     telephone: PHONE.replace(/\s/g, ''),
     address: {
       '@type': 'PostalAddress',

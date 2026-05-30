@@ -1,7 +1,9 @@
 import type { Metadata } from 'next';
 import { Anton, Inter } from 'next/font/google';
 import { headers } from 'next/headers';
+import { getTranslations } from 'next-intl/server';
 import { DEFAULT_LOCALE } from '@/config/locales';
+import { SITE_URL } from '@/config/site';
 import './globals.css';
 
 const anton = Anton({
@@ -18,10 +20,41 @@ const inter = Inter({
   display: 'swap',
 });
 
-export const metadata: Metadata = {
-  title: 'Barber in Varna — Eliza Baidak',
-  description: 'Haircuts, beard shaping and care in Varna. Book online — no waiting.',
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const headersList = await headers();
+  const locale = headersList.get('x-next-intl-locale') ?? DEFAULT_LOCALE;
+  const t = await getTranslations({ locale, namespace: 'meta' });
+
+  return {
+    title: t('title'),
+    description: t('description'),
+    metadataBase: new URL(SITE_URL),
+    openGraph: {
+      locale,
+      url: SITE_URL,
+      type: 'website',
+      siteName: 'Eliza Barber',
+      title: t('title'),
+      description: t('description'),
+      images: [{ url: '/og.jpg' }],
+    },
+    twitter: {
+      title: t('title'),
+      description: t('description'),
+      card: 'summary_large_image',
+      images: ['/og.jpg'],
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: { index: true, follow: true },
+    },
+    icons: {
+      icon: '/favicon.ico',
+      shortcut: '/favicon.ico',
+    },
+  };
+}
 
 export default async function RootLayout({
   children,
