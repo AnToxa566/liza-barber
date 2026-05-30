@@ -1,9 +1,11 @@
 import { useTranslations } from 'next-intl';
 import { RiArrowRightLongLine } from 'react-icons/ri';
 import { BookButton } from '@/components/ui/BookButton';
+import { PHONE } from '@/config/contact';
 
 export function CtaSection() {
   const t = useTranslations('cta');
+  const tContact = useTranslations('contact');
 
   return (
     <section className="cta-big cta-big--dark">
@@ -17,7 +19,7 @@ export function CtaSection() {
           <BookButton type="button" className="btn btn--inv btn--lg">
             {t('btn')} <RiArrowRightLongLine size={16} />
           </BookButton>
-          <span className="cta-big__meta">{t('meta')}</span>
+          <span className="cta-big__meta">{t('meta', { street: tContact('street'), city: tContact('city'), phone: PHONE })}</span>
         </div>
       </div>
     </section>

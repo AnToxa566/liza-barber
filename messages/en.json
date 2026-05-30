@@ -11,9 +11,8 @@
     "headlineA": "Your barber",
     "headlineB": "in Varna.",
     "lead": "Haircuts, beard styling and grooming for men and kids. Walk-in friendly when there's a slot — but online booking is faster.",
-    "address": "ul. Dimitar Ikonomov I 36, Varna",
+    "address": "{street}, {city}",
     "hours": "Sun–Thu · 10:00–20:00",
-    "phone": "+359 87 73 77 255",
     "cta1": "Book appointment",
     "cta2": "Find on map"
   },
@@ -273,7 +272,7 @@
     "title": "Ready for your new look?",
     "sub": "Book online in two minutes. No phone call, no waiting list.",
     "btn": "Book your slot",
-    "meta": "ul. Dimitar Ikonomov I 36 · Varna · +359 87 73 77 255"
+    "meta": "{street} · {city} · {phone}"
   },
   "faq": {
     "kicker": "Q & A",
@@ -316,8 +315,11 @@
   "contact": {
     "kicker": "Find me",
     "title": "Drop in.",
-    "address": "ul. Dimitar Ikonomov I 36, 9010 Varna, Bulgaria",
-    "addressShort": "Dimitar Ikonomov I 36",
+    "street": "ul. Dimitar Ikonomov I 36",
+    "city": "Varna",
+    "postalCode": "9010",
+    "country": "Bulgaria",
+    "address": "{street}, {postalCode} {city}, {country}",
     "hours": [
       {
         "d": "Mon — Thu",
@@ -332,7 +334,6 @@
         "h": "10:00 – 19:00"
       }
     ],
-    "phone": "+359 87 73 77 255",
     "bookBtn": "Book appointment",
     "mapBtn": "Open in Maps →",
     "studioLabel": "Studio",

@@ -2,9 +2,11 @@ import { useTranslations } from 'next-intl';
 import { Placeholder } from '@/components/ui/Placeholder';
 import { BookButton } from '@/components/ui/BookButton';
 import { RiMapPinLine, RiPhoneLine, RiTimeLine } from 'react-icons/ri';
+import { PHONE } from '@/config/contact';
 
 export function Hero() {
   const t = useTranslations('hero');
+  const tContact = useTranslations('contact');
 
   return (
     <section id="top" className="hero hero--A">
@@ -19,9 +21,9 @@ export function Hero() {
           <p className="lead">{t('lead')}</p>
 
           <ul className="hero__meta">
-            <li><RiMapPinLine size={16} /><span>{t('address')}</span></li>
+            <li><RiMapPinLine size={16} /><span>{t('address', { street: tContact('street'), city: tContact('city') })}</span></li>
             <li><RiTimeLine size={16} /><span>{t('hours')}</span></li>
-            <li><RiPhoneLine size={16} /><span>{t('phone')}</span></li>
+            <li><RiPhoneLine size={16} /><span>{PHONE}</span></li>
           </ul>
 
           <div className="hero__ctas">

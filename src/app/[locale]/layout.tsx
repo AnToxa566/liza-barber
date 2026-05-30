@@ -4,6 +4,7 @@ import type { Metadata } from 'next';
 import { routing } from '@/i18n/routing';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
+import { PHONE } from '@/config/contact';
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -27,23 +28,6 @@ export async function generateMetadata({
   };
 }
 
-const LOCAL_BUSINESS_LD = {
-  '@context': 'https://schema.org',
-  '@type': 'LocalBusiness',
-  name: 'Eliza Baidak — Barber',
-  image: '',
-  url: 'https://lizabarber.bg',
-  telephone: '+359877377255',
-  address: {
-    '@type': 'PostalAddress',
-    streetAddress: 'ul. Dimitar Ikonomov I 36',
-    addressLocality: 'Varna',
-    addressCountry: 'BG',
-  },
-  openingHours: 'Sun-Thu 10:00-20:00',
-  priceRange: '30–80 BGN',
-};
-
 const PERSON_LD = {
   '@context': 'https://schema.org',
   '@type': 'Person',
@@ -65,6 +49,24 @@ export default async function LocaleLayout({
 }) {
   const { locale } = await params;
   setRequestLocale(locale);
+
+  const tContact = await getTranslations({ locale, namespace: 'contact' });
+  const LOCAL_BUSINESS_LD = {
+    '@context': 'https://schema.org',
+    '@type': 'LocalBusiness',
+    name: 'Eliza Baidak — Barber',
+    image: '',
+    url: 'https://lizabarber.bg',
+    telephone: PHONE.replace(/\s/g, ''),
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: tContact('street'),
+      addressLocality: 'Varna',
+      addressCountry: 'BG',
+    },
+    openingHours: 'Sun-Thu 10:00-20:00',
+    priceRange: '30–80 BGN',
+  };
 
   const messages = await getMessages();
 

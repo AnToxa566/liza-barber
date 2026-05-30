@@ -2,6 +2,7 @@ import { useTranslations } from 'next-intl';
 import { RiMapPinLine, RiPhoneLine } from 'react-icons/ri';
 import { BookButton } from '@/components/ui/BookButton';
 import { socials } from '@/config/socials';
+import { PHONE } from '@/config/contact';
 
 function MapMock({ mapBtn, addressShort }: { mapBtn: string; addressShort: string }) {
   return (
@@ -47,7 +48,6 @@ function MapMock({ mapBtn, addressShort }: { mapBtn: string; addressShort: strin
 export function Contact() {
   const t = useTranslations('contact');
   const hours = t.raw('hours') as Array<{ d: string; h: string }>;
-  const phone = t('phone');
 
   return (
     <section id="contact" className="sec sec--contact">
@@ -59,7 +59,7 @@ export function Contact() {
           <div className="contact__block">
             <span className="contact__lbl">{t('studioLabel')}</span>
             <p className="contact__addr">
-              <RiMapPinLine size={16} /> {t('address')}
+              <RiMapPinLine size={16} /> {t('address', { street: t('street'), postalCode: t('postalCode'), city: t('city'), country: t('country') })}
             </p>
           </div>
 
@@ -79,8 +79,8 @@ export function Contact() {
 
           <div className="contact__block">
             <span className="contact__lbl">{t('contactLabel')}</span>
-            <a className="contact__phone" href={`tel:${phone.replace(/\s/g, '')}`}>
-              <RiPhoneLine size={16} /> {phone}
+            <a className="contact__phone" href={`tel:${PHONE.replace(/\s/g, '')}`}>
+              <RiPhoneLine size={16} /> {PHONE}
             </a>
             <div className="contact__sm">
               {socials.map(({ label, href, icon: Icon }) => (
@@ -100,7 +100,7 @@ export function Contact() {
         </div>
 
         <div className="contact__map">
-          <MapMock mapBtn={t('mapBtn')} addressShort={t('addressShort')} />
+          <MapMock mapBtn={t('mapBtn')} addressShort={t('street')} />
         </div>
       </div>
     </section>
