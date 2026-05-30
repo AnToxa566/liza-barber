@@ -806,6 +806,7 @@ button { font: inherit; color: inherit; }
 .ftr__col a:hover { color: var(--accent); }
 .ftr__nap { margin: 0; font-size: 14px; color: var(--txt-2); line-height: 1.7; }
 .ftr__nap a { color: var(--txt); }
+.ftr__hours { display: grid; grid-template-columns: max-content auto; column-gap: 1em; font-size: 14px; color: var(--txt-2); line-height: 1.7; }
 .ftr__lang { display: flex; align-items: center; gap: 6px; font: 500 12px/1 var(--font-inter), "Inter", sans-serif; }
 .ftr__lang button { background: transparent; border: 0; padding: 4px 0; cursor: pointer; color: var(--txt-3); }
 .ftr__lang button[data-on="1"] { color: var(--accent); font-weight: 600; }

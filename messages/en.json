@@ -322,24 +322,23 @@
     "address": "{street}, {postalCode} {city}, {country}",
     "hours": [
       {
-        "d": "Mon — Thu",
-        "h": "10:00 – 20:00"
+        "d": "Mon–Thu",
+        "h": "10:00–20:00"
       },
       {
-        "d": "Fri — Sat",
+        "d": "Fri–Sat",
         "h": "Day off"
       },
       {
         "d": "Sun",
-        "h": "10:00 – 19:00"
+        "h": "10:00–19:00"
       }
     ],
     "bookBtn": "Book appointment",
     "mapBtn": "Open in Maps →",
     "studioLabel": "Studio",
     "hoursLabel": "Hours",
-    "contactLabel": "Contact",
-    "hoursShort": "Sun–Thu · 10:00–20:00"
+    "contactLabel": "Contact"
   },
   "footer": {
     "tag": "Barber · Varna · Bulgaria",

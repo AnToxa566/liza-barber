@@ -46,9 +46,16 @@ export function Footer() {
           <span className="ftr__lbl">{t('studioLabel')}</span>
           <p className="ftr__nap">
             {contact('address', { street: contact('street'), postalCode: contact('postalCode'), city: contact('city'), country: contact('country') })}<br />
-            <a href={`tel:${PHONE.replace(/\s/g, '')}`}>{PHONE}</a><br />
-            {contact('hoursShort')}
+            <a href={`tel:${PHONE.replace(/\s/g, '')}`}>{PHONE}</a>
           </p>
+          <div className="ftr__hours">
+            {(contact.raw('hours') as Array<{ d: string; h: string }>).map((row, i) => (
+              <Fragment key={i}>
+                <span>{row.d}</span>
+                <span>{row.h}</span>
+              </Fragment>
+            ))}
+          </div>
         </div>
 
         <div className="ftr__col">
