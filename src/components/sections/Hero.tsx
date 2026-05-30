@@ -1,5 +1,5 @@
+import Image from 'next/image';
 import { useTranslations } from 'next-intl';
-import { Placeholder } from '@/components/ui/Placeholder';
 import { BookButton } from '@/components/ui/BookButton';
 import { RiMapPinLine, RiPhoneLine, RiTimeLine } from 'react-icons/ri';
 import { PHONE, MAP_URL } from '@/config/contact';
@@ -37,8 +37,7 @@ export function Hero() {
         </div>
 
         <div className="hero__photo">
-          <Placeholder kind="portrait" tone="warm" caption="Portrait · Eliza · 3/4 length" tag="01"
-            style={{ width: '100%', height: '100%' }} />
+          <Image src="/images/hero.jpg" alt={t('headlineA')} fill style={{ objectFit: 'cover' }} priority />
         </div>
       </div>
     </section>

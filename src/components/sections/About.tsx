@@ -1,5 +1,5 @@
+import Image from 'next/image';
 import { useTranslations } from 'next-intl';
-import { Placeholder } from '@/components/ui/Placeholder';
 
 export function About() {
   const t = useTranslations('about');
@@ -10,8 +10,7 @@ export function About() {
     <section id="about" className="sec sec--about">
       <div className="container about__grid">
         <div className="about__photo">
-          <Placeholder kind="portrait" tone="dark" caption="Eliza · at work · candid" tag="A · 01"
-            style={{ width: '100%', height: '100%' }} />
+          <Image src="/images/about.jpg" alt={t('title')} fill style={{ objectFit: 'cover' }} priority />
         </div>
 
         <div className="about__text">
