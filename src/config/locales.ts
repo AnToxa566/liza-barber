@@ -3,11 +3,10 @@ export enum Locale {
   EN = 'en',
   RU = 'ru',
   UK = 'uk',
-  TR = 'tr',
 }
 
 export const DEFAULT_LOCALE = Locale.BG;
 
-export const locales = [Locale.BG, Locale.EN, Locale.RU, Locale.UK, Locale.TR] as const;
+export const locales = [Locale.BG, Locale.EN, Locale.RU, Locale.UK] as const;
 
 export type LocaleCode = (typeof locales)[number];

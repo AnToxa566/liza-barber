@@ -241,9 +241,9 @@
   "about": {
     "kicker": "About me",
     "title": "Meet your barber.",
-    "p1": "I'm Eliza — a barber based in Varna for the last five years. I trained in Sofia, then in Berlin under a master barber I still send postcards to, and I've been working out of my own small studio on Knyaz Boris since 2022.",
-    "p2": "I cut for everyone — men, women, kids — and I treat every chair the same: ask the right questions, take time, do it once. No conveyor belt, no upselling, no rushing you out the door.",
-    "p3": "Outside the studio you'll find me at the Sea Garden with a coffee, or sketching tattoo flash for friends.",
+    "p1": "I'm Eliza — a barber with three years behind the chair, now based in Varna. I trained across Ukraine — Zaporizhzhia, Dnipro, Kyiv — and continued here in Varna, picking up masterclasses from visiting masters along the way. Since 2025 I've been part of Zeus Barbershop.",
+    "p2": "I cut for men and kids — and I treat every chair the same: ask the right questions, take time, do it once. No conveyor belt, no upselling, no rushing you out the door.",
+    "p3": "Outside the studio you'll find me at the Sea Garden with a coffee, or at vocal school chasing a completely different kind of craft.",
     "pills": [
       "3+ years",
       "BG · EN · RU · UK",
@@ -289,7 +289,7 @@
       },
       {
         "q": "Where are you located and how to get there?",
-        "a": "Knyaz Boris I 47, central Varna — five minutes from the cathedral, two minutes from the Opera. Bus 9, 14, 17 stop on the corner. Limited paid parking on the street."
+        "a": "ul. Dimitar Ikonomov 36, Levski district, Varna. Five minutes walk from Yavor bus stop."
       },
       {
         "q": "Do you work with children?",
