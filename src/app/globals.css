@@ -6,7 +6,7 @@
 
 /* styles.css — Eliza Barber site styles
  * Monochrome + indigo. Graphic-studio vibe:
- * tight grid, big Anton headlines, hard edges, almost no shadows.
+ * tight grid, big Oswald headlines, hard edges, almost no shadows.
  */
 
 * { box-sizing: border-box; }
@@ -22,7 +22,7 @@
   --accent-hover: #312E81;
   --accent-tint: #DDDDF0;
   --accent-tint-txt: #3B30B8;
-  --font-display: var(--font-anton), "Anton", sans-serif;
+  --font-display: var(--font-oswald), "Oswald", sans-serif;
   --display-track: -0.03em;
   --sec-pad: 96px;
   --card-gap: 32px;

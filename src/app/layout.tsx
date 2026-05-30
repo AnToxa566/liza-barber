@@ -1,15 +1,15 @@
 import type { Metadata } from 'next';
-import { Anton, Inter } from 'next/font/google';
+import { Oswald, Inter } from 'next/font/google';
 import { headers } from 'next/headers';
 import { getTranslations } from 'next-intl/server';
 import { DEFAULT_LOCALE } from '@/config/locales';
 import { SITE_URL } from '@/config/site';
 import './globals.css';
 
-const anton = Anton({
-  weight: '400',
+const oswald = Oswald({
+  weight: '700',
   subsets: ['latin'],
-  variable: '--font-anton',
+  variable: '--font-oswald',
   display: 'swap',
 });
 
@@ -65,7 +65,7 @@ export default async function RootLayout({
   const locale = headersList.get('x-next-intl-locale') ?? DEFAULT_LOCALE;
 
   return (
-    <html lang={locale} className={`${anton.variable} ${inter.variable}`}>
+    <html lang={locale} className={`${oswald.variable} ${inter.variable}`}>
       <body>{children}</body>
     </html>
   );
