@@ -60,18 +60,6 @@ export async function generateMetadata({
   };
 }
 
-const PERSON_LD = {
-  '@context': 'https://schema.org',
-  '@type': 'Person',
-  name: 'Eliza Baidak',
-  jobTitle: 'Barber',
-  address: {
-    '@type': 'PostalAddress',
-    addressLocality: 'Varna',
-    addressCountry: 'BG',
-  },
-};
-
 export default async function LocaleLayout({
   children,
   params,
@@ -83,6 +71,19 @@ export default async function LocaleLayout({
   setRequestLocale(locale);
 
   const tContact = await getTranslations({ locale, namespace: 'contact' });
+
+  const PERSON_LD = {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    name: 'Eliza Baidak',
+    jobTitle: 'Barber',
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: tContact('city'),
+      addressCountry: tContact('country'),
+    },
+  };
+
   const LOCAL_BUSINESS_LD = {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
@@ -93,11 +94,11 @@ export default async function LocaleLayout({
     address: {
       '@type': 'PostalAddress',
       streetAddress: tContact('street'),
-      addressLocality: 'Varna',
-      addressCountry: 'BG',
+      addressLocality: tContact('city'),
+      addressCountry: tContact('country'),
     },
-    openingHours: 'Sun-Thu 10:00-20:00',
-    priceRange: '30–80 BGN',
+    openingHours: ['Su 10:00-19:00', 'Mo 10:00-20:00', 'Tu 10:00-20:00', 'We 10:00-20:00', 'Th 10:00-20:00'],
+    priceRange: '€10–€45',
   };
 
   const messages = await getMessages();
