@@ -2,7 +2,7 @@ import { useTranslations } from 'next-intl';
 import { RiMapPinLine, RiPhoneLine } from 'react-icons/ri';
 import { BookButton } from '@/components/ui/BookButton';
 import { socials } from '@/config/socials';
-import { PHONE } from '@/config/contact';
+import { PHONE, COORDINATES, MAP_URL } from '@/config/contact';
 
 function MapMock({ mapBtn, addressShort }: { mapBtn: string; addressShort: string }) {
   return (
@@ -36,8 +36,8 @@ function MapMock({ mapBtn, addressShort }: { mapBtn: string; addressShort: strin
       </div>
 
       <div className="map__chrome">
-        <span>43.2087° N · 27.9168° E</span>
-        <a href="https://maps.google.com/?q=ul.+Knyaz+Boris+I+47,+Varna" target="_blank" rel="noopener noreferrer" className="map__open">
+        <span>{COORDINATES}</span>
+        <a href={MAP_URL} target="_blank" rel="noopener noreferrer" className="map__open">
           {mapBtn}
         </a>
       </div>
@@ -58,9 +58,9 @@ export function Contact() {
 
           <div className="contact__block">
             <span className="contact__lbl">{t('studioLabel')}</span>
-            <p className="contact__addr">
+            <a className="contact__addr" href={MAP_URL} target="_blank" rel="noopener noreferrer">
               <RiMapPinLine size={16} /> {t('address', { street: t('street'), postalCode: t('postalCode'), city: t('city'), country: t('country') })}
-            </p>
+            </a>
           </div>
 
           <div className="contact__block">

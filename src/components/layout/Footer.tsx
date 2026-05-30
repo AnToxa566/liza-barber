@@ -5,7 +5,7 @@ import { useLocale, useTranslations } from 'next-intl';
 import { usePathname, useRouter } from '@/i18n/navigation';
 import { socials } from '@/config/socials';
 import { locales } from '@/config/locales';
-import { PHONE } from '@/config/contact';
+import { PHONE, MAP_URL } from '@/config/contact';
 
 export function Footer() {
   const t = useTranslations('footer');
@@ -45,7 +45,7 @@ export function Footer() {
         <div className="ftr__col">
           <span className="ftr__lbl">{t('studioLabel')}</span>
           <p className="ftr__nap">
-            {contact('address', { street: contact('street'), postalCode: contact('postalCode'), city: contact('city'), country: contact('country') })}<br />
+            <a href={MAP_URL} target="_blank" rel="noopener noreferrer">{contact('address', { street: contact('street'), postalCode: contact('postalCode'), city: contact('city'), country: contact('country') })}</a><br />
             <a href={`tel:${PHONE.replace(/\s/g, '')}`}>{PHONE}</a>
           </p>
           <div className="ftr__hours">

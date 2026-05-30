@@ -708,8 +708,11 @@ button { font: inherit; color: inherit; }
   letter-spacing: 0.18em;
   color: var(--txt-3);
 }
-.contact__addr { display: flex; align-items: flex-start; gap: 8px; margin: 0; line-height: 1.5; color: var(--txt); }
-.contact__addr svg { margin-top: 4px; color: var(--accent); flex-shrink: 0; }
+.contact__addr {
+  display: inline-flex; align-items: center; gap: 8px;
+  color: var(--accent); font: 500 16px/1 var(--font-inter), "Inter", sans-serif;
+}
+.contact__addr svg { color: var(--accent); flex-shrink: 0; }
 .contact__hours { border-collapse: collapse; }
 .contact__hours td { padding: 6px 0; font-size: 14px; color: var(--txt); }
 .contact__hours td:first-child { color: var(--txt-3); width: 120px; }
@@ -717,7 +720,7 @@ button { font: inherit; color: inherit; }
   display: inline-flex; align-items: center; gap: 8px;
   color: var(--accent); font: 500 16px/1 var(--font-inter), "Inter", sans-serif;
 }
-.contact__phone svg { color: currentColor; }
+.contact__phone svg { color: var(--accent); flex-shrink: 0; }
 .contact__sm { display: flex; flex-direction: column; gap: 6px; margin-top: 10px; }
 .contact__sm-l {
   display: inline-flex; align-items: center; gap: 8px;

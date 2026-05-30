@@ -2,7 +2,7 @@ import { useTranslations } from 'next-intl';
 import { Placeholder } from '@/components/ui/Placeholder';
 import { BookButton } from '@/components/ui/BookButton';
 import { RiMapPinLine, RiPhoneLine, RiTimeLine } from 'react-icons/ri';
-import { PHONE } from '@/config/contact';
+import { PHONE, MAP_URL } from '@/config/contact';
 
 export function Hero() {
   const t = useTranslations('hero');
@@ -30,7 +30,7 @@ export function Hero() {
             <BookButton type="button" className="btn btn--primary btn--lg">
               {t('cta1')}
             </BookButton>
-            <a href="#contact" className="btn btn--ghost btn--lg">
+            <a href={MAP_URL} target="_blank" rel="noopener noreferrer" className="btn btn--ghost btn--lg">
               {t('cta2')}
             </a>
           </div>
