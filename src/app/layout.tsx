@@ -4,6 +4,7 @@ import { headers } from 'next/headers';
 import { getTranslations } from 'next-intl/server';
 import { DEFAULT_LOCALE } from '@/config/locales';
 import { SITE_URL } from '@/config/site';
+import BookingFab from '@/components/ui/BookingFab';
 import './globals.css';
 
 const oswald = Oswald({
@@ -66,7 +67,10 @@ export default async function RootLayout({
 
   return (
     <html lang={locale} className={`${oswald.variable} ${inter.variable}`}>
-      <body>{children}</body>
+      <body>
+        {children}
+        <BookingFab />
+      </body>
     </html>
   );
 }

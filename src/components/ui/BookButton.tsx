@@ -1,26 +1,15 @@
-'use client';
-
 import React from 'react';
+import { BOOKING_URL } from '@/config/booking';
 
-interface BookButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+type BookButtonProps = Omit<React.AnchorHTMLAttributes<HTMLAnchorElement>, 'href' | 'target' | 'rel'> & {
   children: React.ReactNode;
-}
+  type?: string;
+};
 
-declare global {
-  interface Window {
-    altegioWidget?: { open: () => void };
-  }
-}
-
-export function BookButton({ children, onClick, ...props }: BookButtonProps) {
-  function handleClick(e: React.MouseEvent<HTMLButtonElement>) {
-    window.altegioWidget?.open();
-    onClick?.(e);
-  }
-
+export function BookButton({ children, type: _type, ...props }: BookButtonProps) {
   return (
-    <button {...props} onClick={handleClick}>
+    <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" {...props}>
       {children}
-    </button>
+    </a>
   );
 }

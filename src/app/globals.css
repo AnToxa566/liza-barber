@@ -936,3 +936,36 @@ button { font: inherit; color: inherit; }
   .lb { padding: 44px 16px 16px; }
   .lb__nav { width: 36px; height: 36px; }
 }
+
+/* ─── Booking FAB ──────────────────────────────────────────────────────────── */
+.fab {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 1200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #fff;
+  font-size: 24px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.18), 0 1px 6px rgba(0,0,0,0.10);
+  transition: background .2s ease, transform .2s ease;
+  text-decoration: none;
+}
+
+.fab:hover  { background: var(--accent-hover); transform: scale(1.05); }
+.fab:active { transform: scale(0.97); }
+
+@media (max-width: 379px) {
+  .fab { width: 48px; height: 48px; font-size: 20px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fab,
+  .fab:hover,
+  .fab:active { transform: none; transition: background .2s ease; }
+}
