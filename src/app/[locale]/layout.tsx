@@ -39,14 +39,14 @@ export async function generateMetadata({
       siteName: 'Eliza Barber',
       title: t('title'),
       description: t('description'),
-      images: [{ url: '/og.jpg' }],
+      images: [{ url: `${SITE_URL}/images/hero.jpg` }],
       locale: OG_LOCALE[locale] ?? locale,
     },
     twitter: {
       card: 'summary_large_image',
       title: t('title'),
       description: t('description'),
-      images: ['/og.jpg'],
+      images: [`${SITE_URL}/images/hero.jpg`],
     },
     robots: {
       index: true,
@@ -88,7 +88,7 @@ export default async function LocaleLayout({
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
     name: 'Eliza Baidak — Barber',
-    image: '',
+    image: `${SITE_URL}/images/hero.jpg`,
     url: SITE_URL,
     telephone: PHONE.replace(/\s/g, ''),
     address: {
