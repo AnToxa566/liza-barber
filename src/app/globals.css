@@ -346,7 +346,7 @@ button { font: inherit; color: inherit; }
   flex-wrap: wrap;
 }
 .sec__sub { color: var(--txt-2); font-size: 16px; line-height: 1.65; margin: 16px 0 0; max-width: 60ch; }
-.sec__sub--right { text-align: right; max-width: 22ch; }
+.sec__sub--right { text-align: right; max-width: 24ch; }
 
 /* ── Services ─────────────────────────────────────────────────────────── */
 

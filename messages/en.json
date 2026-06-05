@@ -197,12 +197,12 @@
   "reviews": {
     "kicker": "What people say",
     "title": "Reviews.",
-    "sub": "Pulled straight from Altegio. Nothing edited.",
+    "sub": "Pulled straight from Google and Altegio. Nothing edited.",
     "items": [
       {
-        "text": "Eliza is a wonderful specialist! She approaches everything with attention to detail and care. I'm very happy with the haircut and beard shaping tailored to my style. Highly recommend!",
-        "name": "Emil",
-        "source": "Altegio",
+        "text": "I'm really happy and satisfied with my first visit. Friendly people and a clean shop. The lady who cut my hair gave great advice and has a keen eye for detail. You'll definitely see me again!",
+        "name": "Nick Kok",
+        "source": "Google",
         "stars": 5
       },
       {
@@ -212,9 +212,9 @@
         "stars": 5
       },
       {
-        "text": "A real professional who knows exactly how to cut a classic hairstyle. Highly recommended!",
-        "name": "Nick",
-        "source": "Altegio",
+        "text": "Great barber, friendly staff with professional skills, special thanks to master Elizaveta, really liked the work done, highly recommend!!!",
+        "name": "Yevhen Davydov",
+        "source": "Google",
         "stars": 5
       },
       {
@@ -224,9 +224,9 @@
         "stars": 5
       },
       {
-        "text": "Incredibly precise work — she perfects every detail, so attentive! One of a kind! We are very pleased, thank you!",
-        "name": "Mariyana Madzharova",
-        "source": "Altegio",
+        "text": "Simply excellent service and great value for money. I feel very well advised and in good hands there. Many thanks to Eliza, she does a fantastic job. My regular hairdresser 😄",
+        "name": "Stephan Heilen",
+        "source": "Google",
         "stars": 5
       },
       {
