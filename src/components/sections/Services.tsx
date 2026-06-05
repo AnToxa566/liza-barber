@@ -1,14 +1,23 @@
 import { useTranslations } from 'next-intl';
 import { ServicesTabs, type Category } from './ServicesTabs';
+import { SERVICES_DATA } from '@/config/services';
+import { ALTEGIO_SELECT_TIME_URL } from '@/config/booking';
+import { formatDuration } from '@/lib/formatDuration';
 
 export function Services() {
   const t = useTranslations('services');
 
-  const rawItems = t.raw('items') as Array<{ title: string; items: Category['items'] }>;
-  const categories: Category[] = rawItems.map((cat) => ({
+  const rawItems = t.raw('items') as Array<{ title: string; items: Array<{ name: string; desc: string }> }>;
+  const categories: Category[] = rawItems.map((cat, ci) => ({
     id: cat.title.toLowerCase().replace(/\s+/g, '-'),
     label: cat.title,
-    items: cat.items,
+    items: cat.items.map((item, ii) => ({
+      name: item.name,
+      desc: item.desc,
+      price: `${SERVICES_DATA[ci].items[ii].price}€`,
+      bookingUrl: `${ALTEGIO_SELECT_TIME_URL}s${SERVICES_DATA[ci].items[ii].altegio_id}`,
+      duration: formatDuration(SERVICES_DATA[ci].items[ii].duration, (key) => t(key as Parameters<typeof t>[0])),
+    })),
   }));
 
   return (

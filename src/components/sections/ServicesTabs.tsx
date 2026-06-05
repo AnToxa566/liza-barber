@@ -13,9 +13,10 @@ const SVC_TONES: Tone[] = ['light', 'warm', 'mid', 'light', 'dark', 'warm'];
 
 export type ServiceItem = {
   name: string;
+  desc: string;
   price: string;
   duration: string;
-  desc: string;
+  bookingUrl?: string;
 };
 
 export type Category = {
@@ -77,7 +78,7 @@ export function ServicesTabs({ categories, bookThis }: Props) {
               </div>
               <div className="svc-card__meta"><RiTimeLine size={12} /> {svc.duration}</div>
               <p className="svc-card__desc">{svc.desc}</p>
-              <BookButton type="button" className="btn btn--outline">
+              <BookButton type="button" className="btn btn--outline" url={svc.bookingUrl}>
                 {bookThis}
               </BookButton>
             </div>

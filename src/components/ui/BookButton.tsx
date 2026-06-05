@@ -4,11 +4,12 @@ import { BOOKING_URL } from '@/config/booking';
 type BookButtonProps = Omit<React.AnchorHTMLAttributes<HTMLAnchorElement>, 'href' | 'target' | 'rel'> & {
   children: React.ReactNode;
   type?: string;
+  url?: string;
 };
 
-export function BookButton({ children, type: _type, ...props }: BookButtonProps) {
+export function BookButton({ children, type: _type, url, ...props }: BookButtonProps) {
   return (
-    <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" {...props}>
+    <a href={url ?? BOOKING_URL} target="_blank" rel="noopener noreferrer" {...props}>
       {children}
     </a>
   );
