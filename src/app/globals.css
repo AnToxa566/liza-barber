@@ -943,6 +943,13 @@ button { font: inherit; color: inherit; }
 
   .lb { padding: 44px 16px 16px; }
   .lb__nav { width: 36px; height: 36px; }
+  .lb__fig { max-height: calc(100svh - 120px); width: auto; max-width: 100%; aspect-ratio: auto; justify-self: unset; }
+  .lb__x, .lb__nav {
+    background: rgba(0,0,0,0.48);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border: 1px solid rgba(255,255,255,0.18);
+  }
 }
 
 /* ─── Booking FAB ──────────────────────────────────────────────────────────── */
