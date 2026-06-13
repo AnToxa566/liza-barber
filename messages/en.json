@@ -49,7 +49,7 @@
         "title": "Haircuts",
         "items": [
           {
-            "name": "Kid's Haircut (6–10 y.o.)",
+            "name": "Kid's Haircut (8–12 y.o.)",
             "desc": "Consultation, wash, precise haircut, blow-dry and styling. A calm and comfortable experience tailored to your child's age."
           },
           {
@@ -257,7 +257,7 @@
       },
       {
         "q": "Do you work with children?",
-        "a": "Yes — kids 6 and up. The kids cut is 15€. We keep it calm, no rush, no fuss. Tablets and snacks welcome."
+        "a": "Yes — kids 8 and up. The kids cut is 15€. We keep it calm, no rush, no fuss. Tablets and snacks welcome."
       },
       {
         "q": "What languages do you speak?",

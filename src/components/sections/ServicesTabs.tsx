@@ -1,21 +1,16 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 import { RiTimeLine } from 'react-icons/ri';
-import { Placeholder } from '@/components/ui/Placeholder';
 import { BookButton } from '@/components/ui/BookButton';
-
-type Tone = 'light' | 'mid' | 'dark' | 'warm';
-type Kind = 'portrait' | 'scissors' | 'comb' | 'razor' | 'studio' | 'beard';
-
-const SVC_KINDS: Kind[] = ['scissors', 'beard', 'razor', 'comb', 'razor', 'studio'];
-const SVC_TONES: Tone[] = ['light', 'warm', 'mid', 'light', 'dark', 'warm'];
 
 export type ServiceItem = {
   name: string;
   desc: string;
   price: string;
   duration: string;
+  thumbnail?: string;
   bookingUrl?: string;
 };
 
@@ -64,12 +59,15 @@ export function ServicesTabs({ categories, bookThis }: Props) {
         {current.items.map((svc, i) => (
           <article key={i} className="svc-card svc-card--photo">
             <div className="svc-card__media">
-              <Placeholder
-                kind={SVC_KINDS[i % SVC_KINDS.length]}
-                tone={SVC_TONES[i % SVC_TONES.length]}
-                caption={`Service · ${String(i + 1).padStart(2, '0')}`}
-                style={{ width: '100%', aspectRatio: '4/3' }}
-              />
+              {svc.thumbnail && (
+                <Image
+                  width={600}
+                  height={450}
+                  alt={svc.name}
+                  src={svc.thumbnail}
+                  style={{ width: '100%', height: 'auto' }}
+                />
+              )}
             </div>
             <div className="svc-card__body">
               <div className="svc-card__topline">

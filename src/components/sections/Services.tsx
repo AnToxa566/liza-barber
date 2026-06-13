@@ -17,6 +17,7 @@ export function Services() {
       price: `${SERVICES_DATA[ci].items[ii].price}€`,
       bookingUrl: `${ALTEGIO_SELECT_TIME_URL}s${SERVICES_DATA[ci].items[ii].altegio_id}`,
       duration: formatDuration(SERVICES_DATA[ci].items[ii].duration, (key) => t(key as Parameters<typeof t>[0])),
+      thumbnail: SERVICES_DATA[ci].items[ii].thumbnail,
     })),
   }));
 
