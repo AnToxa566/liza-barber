@@ -1,8 +1,10 @@
 'use client';
 
+import Image from 'next/image';
+import { useTranslations } from 'next-intl';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { RiArrowLeftSLine, RiArrowRightSLine, RiExpandLeftRightLine } from 'react-icons/ri';
-import { useTranslations } from 'next-intl';
+
 import { Placeholder } from '@/components/ui/Placeholder';
 
 type Tone = 'light' | 'mid' | 'dark' | 'warm';
@@ -11,9 +13,8 @@ type Kind = 'portrait' | 'scissors' | 'comb' | 'razor' | 'studio' | 'beard';
 interface GalItem {
   id: number;
   kind: Kind;
-  tone: Tone;
+  image: string;
   span: 'tall' | 'wide' | 'sq';
-  caption: string;
 }
 
 const BA_PAIRS = [
@@ -23,15 +24,14 @@ const BA_PAIRS = [
 ];
 
 const GAL_ITEMS: GalItem[] = [
-  { id: 1, kind: 'portrait', tone: 'warm', span: 'tall', caption: 'Studio cut · 04' },
-  { id: 2, kind: 'beard', tone: 'dark', span: 'wide', caption: 'Beard sculpt · 11' },
-  { id: 3, kind: 'scissors', tone: 'light', span: 'sq', caption: 'Tools · 02' },
-  { id: 4, kind: 'portrait', tone: 'mid', span: 'sq', caption: 'Fade · 07' },
-  { id: 5, kind: 'portrait', tone: 'warm', span: 'tall', caption: 'Long layers · 09' },
-  { id: 6, kind: 'studio', tone: 'light', span: 'wide', caption: 'Studio · interior' },
-  { id: 7, kind: 'portrait', tone: 'dark', span: 'sq', caption: 'Crop · 13' },
-  { id: 8, kind: 'comb', tone: 'mid', span: 'sq', caption: 'Detail · 06' },
-  { id: 9, kind: 'portrait', tone: 'warm', span: 'tall', caption: 'Bob · 14' },
+  { id: 1, kind: 'portrait', span: 'tall', image: '/images/gallery/04.jpeg' },
+  { id: 2, kind: 'beard', span: 'wide', image: '/images/gallery/02.jpeg' },
+  { id: 3, kind: 'scissors', span: 'sq', image: '/images/gallery/08.png' },
+  { id: 4, kind: 'portrait', span: 'sq', image: '/images/gallery/05.png' },
+  { id: 5, kind: 'portrait', span: 'tall', image: '/images/gallery/01.jpg' },
+  { id: 8, kind: 'comb', span: 'sq', image: '/images/gallery/06.jpg' },
+  { id: 6, kind: 'studio', span: 'wide', image: '/images/gallery/09.jpg' },
+  { id: 7, kind: 'portrait', span: 'sq', image: '/images/gallery/07.jpg' },
 ];
 
 function BeforeAfterSlider({ pair, index }: { pair: typeof BA_PAIRS[0]; index: number }) {
@@ -127,11 +127,9 @@ function Lightbox({
         <RiArrowRightSLine size={20} />
       </button>
       <figure className="lb__fig" onClick={(e) => e.stopPropagation()}>
-        <Placeholder kind={g.kind} tone={g.tone} caption={g.caption}
-          tag={`0${index + 1} / ${items.length}`}
-          style={{ width: '100%', height: '100%' }} />
+        <Image fill src={g.image} alt='Gallery image' style={{ 'objectFit': 'cover' }} />
       </figure>
-      <div className="lb__cap">{g.caption} <span>· {index + 1} / {items.length}</span></div>
+      <div className="lb__cap"><span>{index + 1} / {items.length}</span></div>
     </div>
   );
 }
@@ -173,12 +171,11 @@ export function Work() {
             <button
               key={g.id}
               type="button"
+              aria-label="Open photo"
               className={`gal__item gal__item--${g.span}`}
               onClick={() => setLightboxIndex(i)}
-              aria-label={`Open photo: ${g.caption}`}
             >
-              <Placeholder kind={g.kind} tone={g.tone} caption={g.caption} tag={`0${i + 1}`}
-                style={{ width: '100%', height: '100%' }} />
+              <Image fill src={g.image} alt="Gallery image" style={{ 'objectFit': 'cover' }} />
             </button>
           ))}
         </div>
