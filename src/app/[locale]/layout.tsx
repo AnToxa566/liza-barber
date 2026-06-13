@@ -1,8 +1,11 @@
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, getTranslations, setRequestLocale } from 'next-intl/server';
 import type { Metadata } from 'next';
+
 import { routing } from '@/i18n/routing';
 import { Analytics } from '@vercel/analytics/next';
+import { SpeedInsights } from '@vercel/speed-insights/next';
+
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { PHONE } from '@/config/contact';
@@ -109,6 +112,7 @@ export default async function LocaleLayout({
       <Header />
       <main>{children}</main>
       <Footer />
+
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(LOCAL_BUSINESS_LD) }}
@@ -117,7 +121,9 @@ export default async function LocaleLayout({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(PERSON_LD) }}
       />
+
       <Analytics />
+      <SpeedInsights />
     </NextIntlClientProvider>
   );
 }
