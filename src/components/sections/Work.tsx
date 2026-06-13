@@ -174,7 +174,7 @@ export function Work() {
               type="button"
               aria-label="Open photo"
               className={`gal__item gal__item--${g.span}`}
-              onClick={() => setLightboxIndex(i)}
+              onClick={() => { if (window.innerWidth >= 640) setLightboxIndex(i); }}
             >
               <Image fill src={g.image} alt="Gallery image" style={{ 'objectFit': 'cover' }} />
             </button>
