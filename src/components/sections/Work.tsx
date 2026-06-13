@@ -149,7 +149,7 @@ export function Work() {
   return (
     <section id="work" className="sec sec--work">
       <div className="container">
-        <header className="sec__head">
+        {/* <header className="sec__head">
           <span className="kicker">{t('kicker')}</span>
           <h2 className="h2">{t('title')}</h2>
           <p className="sec__sub">{t('sub')}</p>
@@ -159,9 +159,10 @@ export function Work() {
           {BA_PAIRS.map((pair, i) => (
             <BeforeAfterSlider key={pair.id} pair={pair} index={i} />
           ))}
-        </div>
+        </div> */}
 
-        <header className="sec__head sec__head--mt">
+        {/* TODO: add sec__head--mt when before/afters are back */}
+        <header className="sec__head">
           <span className="kicker">{t('galleryKicker')}</span>
           <h2 className="h2">{t('galleryTitle')}</h2>
         </header>
