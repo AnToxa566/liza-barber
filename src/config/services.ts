@@ -1,10 +1,10 @@
 export const SERVICES_DATA = [
   { // Haircuts
     items: [
-      { price: 15, duration: 60, altegio_id: 12245787, thumbnail: '/images/services/kids_haircut.jpg' },
       { price: 20, duration: 60, altegio_id: 12030459, thumbnail: '/images/services/mens_haircut.jpg' },
       { price: 25, duration: 90, altegio_id: 12030463, thumbnail: '/images/services/long_hair_haircut.jpg' },
       { price: 30, duration: 90, altegio_id: 12030462, thumbnail: '/images/services/haircut_and_hair_camouflage.jpg' },
+      { price: 15, duration: 60, altegio_id: 12245787, thumbnail: '/images/services/kids_haircut.jpg' },
     ],
   },
   { // Beard

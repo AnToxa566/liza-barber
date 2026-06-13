@@ -49,10 +49,6 @@
         "title": "Haircuts",
         "items": [
           {
-            "name": "Kid's Haircut (8–12 y.o.)",
-            "desc": "Consultation, wash, precise haircut, blow-dry and styling. A calm and comfortable experience tailored to your child's age."
-          },
-          {
             "name": "Men's Haircut",
             "desc": "Consultation, wash, precise cut and contouring, eyebrow shaping, nose and ear waxing, styling and home care tips. Suits both classic and modern looks."
           },
@@ -63,6 +59,10 @@
           {
             "name": "Men's Haircut & Hair Camouflage",
             "desc": "Precise haircut combined with camouflaging grey or thinning hair using specialist techniques and products. Includes consultation, wash, cut, camouflage and styling."
+          },
+          {
+            "name": "Kid's Haircut (8–12 y.o.)",
+            "desc": "Consultation, wash, precise haircut, blow-dry and styling. A calm and comfortable experience tailored to your child's age."
           }
         ]
       },
