@@ -31,7 +31,7 @@ export function About() {
               <li key={i}>
                 <span className="about__why-k">0{i + 1}</span>
                 <div>
-                  <h4 className="about__why-t">{item.title}</h4>
+                  <h3 className="about__why-t">{item.title}</h3>
                   <p className="about__why-d">{item.desc}</p>
                 </div>
               </li>
