@@ -17,7 +17,6 @@
   --border: #E5E5E5;
   --txt: #111111;
   --txt-2: #555555;
-  --txt-3: #999999;
   --accent: #4338CA;
   --accent-hover: #312E81;
   --accent-tint: #DDDDF0;
@@ -211,7 +210,7 @@ button { font: inherit; color: inherit; }
 .hdr__lang { display: flex; align-items: center; gap: 4px; font: 500 11px/1 var(--font-inter), "Inter", sans-serif; }
 .hdr__lang button {
   background: transparent; border: 0; padding: 4px 2px; cursor: pointer;
-  color: var(--txt-3); letter-spacing: 0.08em;
+  color: var(--txt-2); letter-spacing: 0.08em;
 }
 .hdr__lang button[data-on="1"] { color: var(--accent); font-weight: 600; }
 .hdr__lang button:hover { color: var(--txt); }
@@ -262,7 +261,7 @@ button { font: inherit; color: inherit; }
 .hdr__sheet-num {
   font: 500 11px/1 var(--font-inter), "Inter", sans-serif;
   letter-spacing: 0.18em;
-  color: var(--txt-3);
+  color: var(--txt-2);
 }
 .hdr__sheet-foot { display: flex; justify-content: space-between; align-items: center; gap: 16px; }
 .hdr__lang--lg button { font-size: 14px; }
@@ -297,7 +296,7 @@ button { font: inherit; color: inherit; }
   list-style: none; padding: 0; margin: 0 0 28px;
   display: flex; flex-wrap: wrap; gap: 14px 24px;
   font: 400 13px/1 var(--font-inter), "Inter", sans-serif;
-  color: var(--txt-3);
+  color: var(--txt-2);
 }
 .hero__meta li { display: flex; align-items: center; gap: 8px; }
 .hero__meta svg { color: var(--accent); }
@@ -336,7 +335,7 @@ button { font: inherit; color: inherit; }
   text-transform: uppercase;
   text-align: center;
   letter-spacing: 0.14em;
-  color: var(--txt-3);
+  color: var(--txt-2);
 }
 
 /* ── Section base ─────────────────────────────────────────────────────── */
@@ -381,10 +380,10 @@ button { font: inherit; color: inherit; }
   letter-spacing: 0.02em;
 }
 .svc-card__meta {
-  font: 400 13px/1 var(--font-inter), "Inter", sans-serif; color: var(--txt-3);
+  font: 400 13px/1 var(--font-inter), "Inter", sans-serif; color: var(--txt-2);
   display: inline-flex; align-items: center; gap: 6px;
 }
-.svc-card__meta svg { color: var(--txt-3); }
+.svc-card__meta svg { color: var(--txt-2); }
 .svc-card__desc {
   font-size: 14px; line-height: 1.55; color: var(--txt-2); margin: 0;
 }
@@ -410,7 +409,7 @@ button { font: inherit; color: inherit; }
   font: 600 13px/1 var(--font-inter), "Inter", sans-serif;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: var(--txt-3);
+  color: var(--txt-2);
   cursor: pointer;
   border-bottom: 2px solid transparent;
   white-space: nowrap;
@@ -582,7 +581,7 @@ button { font: inherit; color: inherit; }
 }
 .rev-card__who { display: flex; flex-direction: column; gap: 2px; }
 .rev-card__name { font: 600 14px/1 var(--font-inter), "Inter", sans-serif; color: var(--txt); }
-.rev-card__src { font: 400 12px/1 var(--font-inter), "Inter", sans-serif; color: var(--txt-3); }
+.rev-card__src { font: 400 12px/1 var(--font-inter), "Inter", sans-serif; color: var(--txt-2); }
 
 .sec--about { background: var(--surface); }
 
@@ -666,7 +665,7 @@ button { font: inherit; color: inherit; }
 .faq__num {
   font: 400 14px/1 var(--font-inter), "Inter", sans-serif;
   font-variant-numeric: tabular-nums;
-  color: var(--txt-3);
+  color: var(--txt-2);
   letter-spacing: 0.1em;
 }
 .faq__q-text {
@@ -716,7 +715,7 @@ button { font: inherit; color: inherit; }
   font: 600 11px/1 var(--font-inter), "Inter", sans-serif;
   text-transform: uppercase;
   letter-spacing: 0.18em;
-  color: var(--txt-3);
+  color: var(--txt-2);
 }
 .contact__addr {
   display: inline-flex; align-items: center; gap: 8px;
@@ -725,7 +724,7 @@ button { font: inherit; color: inherit; }
 .contact__addr svg { color: var(--accent); flex-shrink: 0; }
 .contact__hours { border-collapse: collapse; }
 .contact__hours td { padding: 6px 0; font-size: 14px; color: var(--txt); }
-.contact__hours td:first-child { color: var(--txt-3); width: 120px; }
+.contact__hours td:first-child { color: var(--txt-2); width: 120px; }
 .contact__phone {
   display: inline-flex; align-items: center; gap: 8px;
   color: var(--accent); font: 500 16px/1 var(--font-inter), "Inter", sans-serif;
@@ -777,7 +776,7 @@ button { font: inherit; color: inherit; }
   bottom: 12px; left: 12px; right: 12px;
   display: flex; justify-content: space-between;
   font: 400 11px/1 ui-monospace, Menlo, monospace;
-  color: var(--txt-3);
+  color: var(--txt-2);
   background: rgba(255,255,255,0.85);
   border-radius: 4px;
   padding: 8px 12px;
@@ -803,7 +802,7 @@ button { font: inherit; color: inherit; }
   font: 500 11px/1.4 var(--font-inter), "Inter", sans-serif;
   text-transform: uppercase;
   letter-spacing: 0.16em;
-  color: var(--txt-3);
+  color: var(--txt-2);
   margin: 4px 0 12px;
 }
 .ftr__sm { display: flex; gap: 12px; color: var(--txt-2); }
@@ -812,7 +811,7 @@ button { font: inherit; color: inherit; }
   font: 600 11px/1 var(--font-inter), "Inter", sans-serif;
   text-transform: uppercase;
   letter-spacing: 0.16em;
-  color: var(--txt-3);
+  color: var(--txt-2);
   margin-bottom: 6px;
 }
 .ftr__col a { font-size: 14px; color: var(--txt-2); }
@@ -821,7 +820,7 @@ button { font: inherit; color: inherit; }
 .ftr__nap a { color: var(--txt); }
 .ftr__hours { display: grid; grid-template-columns: max-content auto; column-gap: 1em; font-size: 14px; color: var(--txt-2); line-height: 1.7; }
 .ftr__lang { display: flex; align-items: center; gap: 6px; font: 500 12px/1 var(--font-inter), "Inter", sans-serif; }
-.ftr__lang button { background: transparent; border: 0; padding: 4px 0; cursor: pointer; color: var(--txt-3); }
+.ftr__lang button { background: transparent; border: 0; padding: 4px 0; cursor: pointer; color: var(--txt-2); }
 .ftr__lang button[data-on="1"] { color: var(--accent); font-weight: 600; }
 .ftr__lang span { color: var(--border); }
 
@@ -833,7 +832,7 @@ button { font: inherit; color: inherit; }
   display: flex;
   justify-content: space-between;
   font: 400 12px/1 var(--font-inter), "Inter", sans-serif;
-  color: var(--txt-3);
+  color: var(--txt-2);
 }
 
 /* ── Photo placeholder ────────────────────────────────────────────────── */
