@@ -1,5 +1,5 @@
-import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, getTranslations, setRequestLocale } from 'next-intl/server';
+import { NextIntlClientProvider } from 'next-intl';
 import type { Metadata } from 'next';
 
 import { routing } from '@/i18n/routing';
@@ -8,8 +8,10 @@ import { SpeedInsights } from '@vercel/speed-insights/next';
 
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
+
 import { PHONE } from '@/config/contact';
 import { SITE_URL } from '@/config/site';
+import { DEFAULT_LOCALE } from '@/config/locales';
 
 const OG_LOCALE: Record<string, string> = {
   bg: 'bg_BG',
@@ -35,7 +37,10 @@ export async function generateMetadata({
     description: t('description'),
     alternates: {
       canonical: `/${locale}`,
-      languages: Object.fromEntries(routing.locales.map((l) => [l, `/${l}`])),
+      languages: {
+        ...Object.fromEntries(routing.locales.map((l) => [l, `/${l}`])),
+        'x-default': `/${DEFAULT_LOCALE}`,
+      },
     },
     openGraph: {
       type: 'website',
