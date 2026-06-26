@@ -127,7 +127,7 @@ function Lightbox({
         <RiArrowRightSLine size={20} />
       </button>
       <figure className="lb__fig" onClick={(e) => e.stopPropagation()}>
-        <Image fill src={g.image} alt='Gallery image' style={{ 'objectFit': 'cover' }} />
+        <Image fill sizes="100vw" src={g.image} alt='Gallery image' style={{ 'objectFit': 'cover' }} />
       </figure>
       <div className="lb__cap"><span>{index + 1} / {items.length}</span></div>
     </div>
@@ -176,7 +176,7 @@ export function Work() {
               className={`gal__item gal__item--${g.span}`}
               onClick={() => { if (window.innerWidth >= 640) setLightboxIndex(i); }}
             >
-              <Image fill src={g.image} alt="Gallery image" style={{ 'objectFit': 'cover' }} />
+              <Image fill sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" src={g.image} alt="Gallery image" style={{ 'objectFit': 'cover' }} />
             </button>
           ))}
         </div>

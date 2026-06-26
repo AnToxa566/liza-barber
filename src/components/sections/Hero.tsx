@@ -37,7 +37,7 @@ export function Hero() {
         </div>
 
         <div className="hero__photo">
-          <Image src="/images/hero.jpg" alt={t('headlineA')} fill style={{ objectFit: 'cover' }} priority />
+          <Image src="/images/hero.jpg" alt={t('headlineA')} fill sizes="(max-width: 768px) 100vw, 50vw" style={{ objectFit: 'cover' }} priority />
         </div>
       </div>
     </section>

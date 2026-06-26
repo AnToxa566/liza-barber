@@ -10,7 +10,7 @@ export function About() {
     <section id="about" className="sec sec--about">
       <div className="container about__grid">
         <div className="about__photo">
-          <Image src="/images/about.jpg" alt={t('title')} fill style={{ objectFit: 'cover' }} priority />
+          <Image src="/images/about.jpg" alt={t('title')} fill sizes="(max-width: 768px) 100vw, 50vw" style={{ objectFit: 'cover' }} priority />
         </div>
 
         <div className="about__text">
