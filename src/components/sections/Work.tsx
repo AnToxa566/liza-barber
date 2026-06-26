@@ -3,9 +3,10 @@
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { useCallback, useEffect, useRef, useState } from 'react';
-import { RiArrowLeftSLine, RiArrowRightSLine, RiExpandLeftRightLine } from 'react-icons/ri';
+import { RiArrowLeftSLine, RiArrowRightSLine, RiExpandLeftRightLine, RiInstagramLine } from 'react-icons/ri';
 
 import { Placeholder } from '@/components/ui/Placeholder';
+import { INSTAGRAM_URL } from '@/config/socials';
 
 type Tone = 'light' | 'mid' | 'dark' | 'warm';
 type Kind = 'portrait' | 'scissors' | 'comb' | 'razor' | 'studio' | 'beard';
@@ -179,6 +180,13 @@ export function Work() {
               <Image fill sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" src={g.image} alt="Gallery image" style={{ 'objectFit': 'cover' }} />
             </button>
           ))}
+        </div>
+
+        <div className="gal__more">
+          <a className="gal__link" href={INSTAGRAM_URL}
+             target="_blank" rel="noopener noreferrer">
+            <RiInstagramLine /> <span>{t('moreOnInstagram')}</span>
+          </a>
         </div>
       </div>
 

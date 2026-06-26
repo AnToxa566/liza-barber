@@ -503,6 +503,26 @@ button { font: inherit; color: inherit; }
 .gal__item--tall { grid-row: span 2; }
 .gal__item--wide { grid-column: span 2; }
 
+.gal__more {
+  display: flex;
+  justify-content: center;
+  margin-top: 28px;
+}
+.gal__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--accent);
+  font: 600 14px/1 "Inter", sans-serif;
+}
+.gal__link svg { width: 18px; height: 18px; }
+.gal__link span {
+  padding-bottom: 2px;
+  border-bottom: 1.5px solid transparent;
+  transition: border-color .15s;
+}
+.gal__link:hover span { border-color: var(--accent); }
+
 /* ── Lightbox ─────────────────────────────────────────────────────────── */
 
 .lb {

@@ -7,10 +7,12 @@ export interface Social {
   icon: IconType;
 }
 
+export const INSTAGRAM_URL = 'https://www.instagram.com/eliza.baidak/';
+
 export const socials: Social[] = [
   {
     label: 'Instagram',
-    href: 'https://www.instagram.com/eliza.baidak/',
+    href: INSTAGRAM_URL,
     icon: RiInstagramLine,
   },
   {
